@@ -795,7 +795,8 @@ footer{background:rgba(5,10,18,.46);backdrop-filter:blur(18px);-webkit-backdrop-
  #top .hero-copy>p{margin-top:9px;font-size:.8rem;line-height:1.4}
  #top .hero-actions{margin-top:10px}
  #top .hero-stage{padding:10px 13px;gap:5px}
- .hero-panel-intro,.hero-panel-foot{display:none}
+ .hero-panel-foot{display:none}
+ .hero-panel-intro{display:block!important}
  .hero-service-row{padding:4px 0}
  #top .hero-stats{display:none}
 }
@@ -1170,7 +1171,7 @@ body.locked{overscroll-behavior:none}
  .faq-section .faq{padding-inline:13px}
  .faq-q{min-height:60px;padding:16px 4px;font-size:.89rem}
  .video-carousel{margin-inline:-18px;padding:18px 0 22px}
- .video-track{gap:13px;padding:10px 18px 18px;max-width:100vw;overflow-x:auto;overflow-y:hidden;touch-action:pan-x;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory}
+ .video-track{gap:13px;padding:10px 18px 18px;max-width:100vw;overflow-x:auto;overflow-y:hidden;touch-action:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity}
  .video-card{flex:0 0 min(76vw,300px);scroll-snap-align:center}
  .carousel-arrow{display:none!important}
  .status-section{padding:10px 0 64px}
@@ -1289,6 +1290,12 @@ body.locked{overscroll-behavior:none}
  .support-panel{right:max(14px,env(safe-area-inset-right));width:calc(100vw - 28px);padding:15px}
 }
 @media(prefers-reduced-motion:reduce){.support-panel,.support-launcher{animation:none!important;transition:none!important}}
+@media(max-height:720px) and (max-width:560px){
+ #top .hero-business-intro>span{font-size:.5rem}
+ #top .hero-business-intro h2{margin-top:3px;font-size:clamp(1.3rem,6vw,1.55rem);line-height:1.04}
+ #top .hero-business-intro p{display:block!important;margin-top:4px;font-size:.66rem;line-height:1.35}
+ #top .hero-business-intro>a{min-height:32px;margin-top:0;font-size:.63rem}
+}
 </style>
 </head>
 <body>
@@ -2345,6 +2352,7 @@ body.locked{overscroll-behavior:none}
 
     function startAuto(){
       clearInterval(autoTimer);
+      if(window.matchMedia('(max-width: 760px)').matches) return;
       autoTimer = setInterval(function(){ scrollDir(1); }, 18000);
     }
     function stopAuto(){ clearInterval(autoTimer); }
