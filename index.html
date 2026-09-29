@@ -102,11 +102,15 @@ button{font:inherit;border:0;background:none;color:inherit;cursor:pointer}
 .hero-photo-badge span{color:var(--muted);font-size:.78rem}
 .hero-photo-ring{position:absolute;inset:-1px;border-radius:26px;padding:1px;background:var(--grad);opacity:.6;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
 .info-strip{padding:36px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2)}
-.info-strip-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+.info-strip-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(14px,1.8vw,24px)}
 .info-chip{display:flex;align-items:center;gap:12px}
 .info-chip svg{width:20px;height:20px;color:var(--blue-l);flex-shrink:0}
 .info-chip b{display:block;font-size:.92rem}
 .info-chip span{color:var(--muted);font-size:.78rem}
+.info-chip .live-store-status{display:flex;align-items:center;gap:7px;color:#ffd08b}
+.live-store-status::before{content:"";width:7px;height:7px;flex:0 0 auto;border-radius:50%;background:#f1b15c;box-shadow:0 0 12px rgba(241,177,92,.42)}
+.live-store-status[data-open="true"]{color:#9be8c9}
+.live-store-status[data-open="true"]::before{background:#69dfad;box-shadow:0 0 12px rgba(105,223,173,.55)}
 .info-divider{width:1px;height:34px;background:var(--line)}
 .brand-strip{display:flex;flex-wrap:wrap;gap:10px}
 .brand-strip span{padding:8px 13px;border:1px solid var(--line);border-radius:8px;font-size:.78rem;color:var(--muted)}
@@ -141,8 +145,11 @@ button{font:inherit;border:0;background:none;color:inherit;cursor:pointer}
 .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:46px}
 .process-step{position:relative;padding:26px 22px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
 .process-step .num{font-size:.78rem;font-weight:700;color:var(--blue-l);letter-spacing:.08em;margin-bottom:10px;display:block}
-.process-step h4{font-size:1.02rem;margin-bottom:8px}
+.process-step h4{font-size:1.02rem;margin:0 0 8px}
 .process-step p{color:var(--muted);font-size:.85rem}
+.process-time{display:inline-flex;align-items:center;min-height:25px;margin:0 0 9px;padding:4px 8px;border:1px solid rgba(118,192,255,.15);border-radius:999px;background:rgba(75,139,203,.08);color:#a9d4ff;font-size:.63rem;font-weight:750;letter-spacing:.035em}
+.process-assurance{display:flex;align-items:center;justify-content:center;gap:9px;margin:18px auto 0;color:#b9c9de;font-size:.79rem;font-weight:700;text-align:center}
+.process-assurance i{display:grid;place-items:center;width:19px;height:19px;border:1px solid rgba(105,223,173,.3);border-radius:50%;background:rgba(105,223,173,.1);color:#79e2b8;font-size:.72rem;font-style:normal}
 .process-step:not(:last-child)::after{content:'';position:absolute;top:50%;right:-20px;width:20px;height:1px;background:var(--line)}
 .faq{max-width:760px;margin-top:40px}
 .faq-item{border-bottom:1px solid var(--line)}
@@ -648,7 +655,7 @@ body{background:#080f1b}
  #top .hero-copy>p{margin:18px auto 0;text-align:center}
  #top .hero-actions{justify-content:center;margin-top:20px}
  #top .hero-stage{grid-column:1;grid-row:2;width:min(100%,760px);aspect-ratio:16/9;margin:28px auto 0}
- #top .hero-stats{grid-column:1;grid-row:3;justify-content:center;margin:22px auto 0}
+ #top .hero-stats{grid-column:1;grid-row:3;justify-content:center;margin:16px auto 0}
  #top .hero-stats div:first-child{padding-left:12px}
 }
 @media(max-width:560px){
@@ -683,7 +690,7 @@ main,footer{position:relative;z-index:1}
 #top .hero h1{margin:0;font-size:clamp(3.25rem,5.7vw,5.2rem);line-height:.98;letter-spacing:-.065em;text-align:left}
 #top .hero-copy>p{max-width:535px;margin:20px 0 0;text-align:left;font-size:1rem;line-height:1.75}
 #top .hero-actions{justify-content:flex-start;margin-top:24px}
-#top .hero-stage{position:relative;grid-column:2;grid-row:1 / span 2;align-self:center;display:flex;flex-direction:column;justify-content:space-between;gap:22px;width:100%;min-height:390px;height:auto;margin:0;padding:clamp(22px,3vw,34px);overflow:hidden;border:1px solid rgba(196,222,255,.2);border-radius:27px;background:linear-gradient(138deg,rgba(17,31,50,.66),rgba(7,14,25,.58));box-shadow:0 32px 90px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.1);backdrop-filter:blur(20px) saturate(128%);-webkit-backdrop-filter:blur(20px) saturate(128%);isolation:isolate}
+#top .hero-stage{position:relative;grid-column:2;grid-row:1 / span 2;align-self:center;display:flex;flex-direction:column;justify-content:flex-start;gap:clamp(12px,1.5vw,18px);width:100%;min-height:390px;height:auto;margin:0;padding:clamp(22px,3vw,34px);overflow:hidden;border:1px solid rgba(196,222,255,.2);border-radius:27px;background:linear-gradient(138deg,rgba(17,31,50,.66),rgba(7,14,25,.58));box-shadow:0 32px 90px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.1);backdrop-filter:blur(20px) saturate(128%);-webkit-backdrop-filter:blur(20px) saturate(128%);isolation:isolate}
 #top .hero-stage::before{content:"";position:absolute;z-index:0;inset:0;pointer-events:none;background:radial-gradient(ellipse at 84% 0,rgba(79,158,237,.15),transparent 50%),linear-gradient(135deg,rgba(177,222,255,.04),transparent 38%)}
 #top .hero-stage-glow{display:block;position:absolute;z-index:0;top:44%;right:-8%;width:62%;aspect-ratio:1;border-radius:50%;background:rgba(44,132,219,.18);filter:blur(75px);transform:translateY(-50%);animation:glowPulse 7s ease-in-out infinite}
 .hero-panel-head,.hero-panel-foot{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:16px;color:rgba(213,229,250,.62);font-size:.62rem;font-weight:700;letter-spacing:.12em}
@@ -692,7 +699,7 @@ main,footer{position:relative;z-index:1}
 .hero-panel-head i,.hero-panel-foot i{width:7px;height:7px;flex:0 0 auto;border-radius:50%;background:#6de0bd;box-shadow:0 0 14px rgba(109,224,189,.7)}
 .hero-panel-intro,.hero-service-list{position:relative;z-index:1}
 .hero-panel-intro>span{color:#79d8f2;font-size:.64rem;font-weight:700;letter-spacing:.17em}
-.hero-panel-intro h2{margin-top:10px;color:#f4f7fc;font:700 clamp(1.8rem,3.3vw,2.75rem)/1.08 'Manrope',sans-serif;letter-spacing:-.045em}
+.hero-panel-intro h2{margin:8px 0 0;color:#f4f7fc;font:700 clamp(1.8rem,3.3vw,2.75rem)/1.08 'Manrope',sans-serif;letter-spacing:-.045em}
 .hero-panel-intro h2 strong{color:#a9c9f6;font-weight:600}
 .hero-service-list{display:grid}
 .hero-service-row{display:grid;grid-template-columns:40px 1fr 26px;align-items:center;gap:13px;padding:13px 0;border-top:1px solid rgba(201,222,249,.11);transition:padding .25s,border-color .25s,color .25s}
@@ -702,11 +709,11 @@ main,footer{position:relative;z-index:1}
 .hero-service-row small{display:block;margin-top:2px;color:rgba(192,207,230,.68);font-size:.73rem}
 .hero-service-arrow{display:grid;place-items:center;width:26px;height:26px;border:1px solid rgba(187,214,247,.15);border-radius:50%;color:#a7d8ff;transition:transform .25s,background .25s}
 .hero-service-row:hover .hero-service-arrow{transform:translate(2px,-2px);background:rgba(93,162,232,.15)}
-.hero-panel-foot{padding-top:15px;border-top:1px solid rgba(201,222,249,.11);font-size:.59rem;letter-spacing:.07em}
+.hero-panel-foot{margin-top:auto;padding-top:15px;border-top:1px solid rgba(201,222,249,.11);font-size:.59rem;letter-spacing:.07em}
 .hero-panel-foot>span{display:flex;align-items:center;gap:8px}
 .hero-panel-foot a{color:#b5d9ff;letter-spacing:.03em;transition:color .2s}
 .hero-panel-foot a:hover{color:#fff}
-#top .hero-stats{grid-column:1;grid-row:2;justify-content:flex-start;max-width:none;margin:28px 0 0;padding-top:18px}
+#top .hero-stats{grid-column:1;grid-row:2;justify-content:flex-start;max-width:none;margin:16px 0 0;padding-top:14px}
 #top .hero-stats div:first-child{padding-left:0}
 #top .hero-copy,#top .hero-stage,#top .hero-stats{will-change:transform,opacity}
 #top.is-scrolling .hero-copy,#top.is-scrolling .hero-stage,#top.is-scrolling .hero-stats{opacity:calc(1 - var(--hero-fade)*.92);transform:translate3d(0,calc(var(--hero-fade)*-34px),0);transition:opacity .08s linear,transform .08s linear}
@@ -736,7 +743,7 @@ footer{background:rgba(5,10,18,.46);backdrop-filter:blur(18px);-webkit-backdrop-
  #top .hero-copy>p{margin:18px auto 0;text-align:center}
  #top .hero-actions{justify-content:center;margin-top:20px}
  #top .hero-stage{grid-column:1;grid-row:2;min-height:0;margin:20px auto 0;padding:20px;gap:12px}
- #top .hero-stats{grid-column:1;grid-row:3;justify-content:center;margin:22px auto 0}
+ #top .hero-stats{grid-column:1;grid-row:3;justify-content:center;margin:16px auto 0}
  #top .hero-stats div:first-child{padding-left:12px}
 }
 @media(max-width:560px){
@@ -772,7 +779,7 @@ footer{background:rgba(5,10,18,.46);backdrop-filter:blur(18px);-webkit-backdrop-
  #top .hero-stage{min-height:0;padding:18px;gap:8px}
  .hero-panel-intro h2{font-size:1.75rem}
  .hero-service-row{padding:8px 0}
- #top .hero-stats{margin-top:14px;padding-top:12px}
+ #top .hero-stats{margin-top:10px;padding-top:10px}
 }
 @media(max-height:720px) and (max-width:560px){
  #top.hero{padding:62px 0 10px}
@@ -800,6 +807,7 @@ footer{background:rgba(5,10,18,.46);backdrop-filter:blur(18px);-webkit-backdrop-
 .proof-index{display:flex;align-items:center;gap:9px;color:rgba(192,211,235,.65);font-size:.57rem;font-weight:800;letter-spacing:.14em}
 .proof-index i{width:5px;height:5px;border-radius:50%;background:#70dfbd;box-shadow:0 0 11px rgba(112,223,189,.62)}
 .proof-card strong{position:relative;z-index:1;color:#eef6ff;font:700 clamp(2.35rem,4vw,3.35rem)/1 'Manrope',sans-serif;letter-spacing:-.065em}
+.proof-card-word strong{font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.1;letter-spacing:-.055em}
 .proof-card strong small{color:#81caff;font-size:.52em;letter-spacing:-.02em}
 .proof-card-note strong{font-size:clamp(2rem,3.3vw,2.8rem);letter-spacing:-.055em}
 .proof-note{color:#a6b6cc;font-size:.76rem}
@@ -844,7 +852,7 @@ footer{background:rgba(5,10,18,.46);backdrop-filter:blur(18px);-webkit-backdrop-
 .process-grid,.services .svc-grid{margin-top:34px}
 .process-step{min-height:190px;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s}
 .process-step:hover{transform:translateY(-5px);border-color:rgba(111,195,255,.34);box-shadow:0 20px 45px rgba(0,0,0,.2)}
-.process-step .num{width:38px;height:38px;display:grid;place-items:center;margin:0 0 22px;border:1px solid rgba(108,195,255,.2);border-radius:12px;background:rgba(64,141,213,.09);font-family:'Manrope',sans-serif}
+.process-step .num{width:38px;height:38px;display:grid;place-items:center;margin:0 0 12px;border:1px solid rgba(108,195,255,.2);border-radius:12px;background:rgba(64,141,213,.09);font-family:'Manrope',sans-serif}
 .services .svc-card{min-height:208px}
 .services{background:radial-gradient(ellipse at 92% 16%,rgba(40,93,151,.18),transparent 42%),linear-gradient(180deg,rgba(10,18,30,.3),rgba(13,24,40,.68) 50%,rgba(8,15,26,.3))}
 .faq-section .faq{max-width:960px;margin-top:32px;padding:0 22px;border:1px solid rgba(186,214,245,.13);border-radius:20px;background:linear-gradient(145deg,rgba(16,29,47,.66),rgba(8,15,26,.68));box-shadow:0 22px 56px rgba(0,0,0,.16);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
@@ -860,6 +868,12 @@ footer{background:rgba(5,10,18,.46);backdrop-filter:blur(18px);-webkit-backdrop-
 .reviews .review-grid{margin-top:30px}
 .reviews{background:radial-gradient(ellipse at 18% 20%,rgba(38,78,128,.18),transparent 42%),linear-gradient(180deg,rgba(13,24,40,.68),rgba(8,15,26,.5))}
 .reviews .review-card{min-height:205px}
+.review-service{display:inline-flex;align-items:center;min-height:24px;padding:4px 9px;border:1px solid rgba(121,195,255,.16);border-radius:999px;color:#9bd9ff;background:rgba(60,133,205,.08);font-size:.66rem;font-weight:750;letter-spacing:.025em}
+.review-top{justify-content:space-between}
+.review-write{min-height:44px}
+.review-write svg{width:16px;height:16px}
+.privacy-note{color:rgba(167,184,207,.7);font-size:.72rem;line-height:1.65}
+.privacy-note a{color:#91d6ff;text-decoration:underline;text-decoration-color:rgba(145,214,255,.35);text-underline-offset:3px}
 #iletisim .contact-grid{gap:clamp(22px,3.5vw,44px);margin-top:34px}
 #iletisim{background:radial-gradient(ellipse at 90% 64%,rgba(32,75,122,.19),transparent 42%),linear-gradient(180deg,rgba(8,15,26,.38),rgba(12,22,37,.72))}
 #iletisim .contact-card{gap:0;padding:14px 27px 25px}
@@ -900,7 +914,7 @@ body{font-family:'Manrope',sans-serif;font-size:16px;font-weight:400;line-height
 .site-footer::before{content:"";position:absolute;z-index:-1;left:50%;top:0;width:min(100%,1180px);height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(121,192,255,.48),transparent)}
 .footer-contact-band{position:relative;display:flex;align-items:center;justify-content:space-between;gap:32px;min-height:225px;overflow:hidden;padding:clamp(28px,4vw,48px);border:1px solid rgba(178,208,245,.15);border-radius:26px;background:radial-gradient(ellipse at 85% 48%,rgba(49,111,184,.2),transparent 42%),linear-gradient(115deg,rgba(17,32,52,.85),rgba(9,16,28,.9));box-shadow:0 22px 58px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.06)}
 .footer-band-copy,.footer-band-actions{position:relative;z-index:2}
-.footer-eyebrow{display:flex;align-items:center;gap:9px;color:#a8c2df;font-size:.63rem;font-weight:800;letter-spacing:.14em}
+.footer-eyebrow{display:flex;align-items:center;gap:9px;color:#a8c2df;font-size:.68rem;font-weight:800;letter-spacing:.14em}
 .footer-eyebrow i{width:7px;height:7px;border-radius:50%;background:#6de0bd;box-shadow:0 0 12px rgba(109,224,189,.65)}
 .footer-band-copy h2{margin-top:13px;color:#f2f6fd;font-size:clamp(2rem,4vw,3.15rem);font-weight:800;line-height:.98;letter-spacing:-.075em}
 .footer-band-copy h2 strong{color:#9dc8f7;font-weight:750}
@@ -908,14 +922,10 @@ body{font-family:'Manrope',sans-serif;font-size:16px;font-weight:400;line-height
 .footer-band-actions{display:flex;flex-wrap:wrap;gap:10px}
 .footer-band-actions .btn{min-height:49px;padding:0 18px;white-space:nowrap}
 .footer-band-actions .btn span{margin-left:8px}
-.footer-band-orbit{position:absolute;right:26%;top:50%;width:320px;aspect-ratio:1;transform:translateY(-50%);border:1px solid rgba(106,178,243,.12);border-radius:50%;pointer-events:none}
-.footer-band-orbit::before,.footer-band-orbit::after{content:"";position:absolute;inset:22px;border:1px solid rgba(106,178,243,.08);border-radius:50%}
-.footer-band-orbit::after{inset:48px}
-.footer-band-orbit i,.footer-band-orbit b{position:absolute;top:12%;left:20%;width:7px;height:7px;border-radius:50%;background:#79d5f2;box-shadow:0 0 17px rgba(121,213,242,.72)}
-.footer-band-orbit b{top:auto;left:auto;right:14%;bottom:20%;width:5px;height:5px;background:#73dfba}
 .site-footer .footer-grid{grid-template-columns:1.35fr .72fr .9fr 1fr;gap:clamp(24px,4vw,60px);padding:clamp(48px,6vw,76px) 0 38px}
-.site-footer .footer-grid h5{margin-bottom:17px;color:#dce7f7;font-size:.68rem;letter-spacing:.15em}
+.site-footer .footer-grid h5{margin-bottom:17px;color:#dce7f7;font-size:.7rem;letter-spacing:.15em}
 .site-footer .footer-grid a,.site-footer .footer-grid p,.site-footer .footer-contact-column span{display:block;width:auto;margin:0 0 11px;color:#98a9c0;font-size:.79rem;line-height:1.7}
+.site-footer .footer-grid>div:not(.footer-brand-column)>a{min-height:32px;padding-block:5px;font-size:.84rem}
 .site-footer .footer-grid a{transition:color .2s,transform .2s}
 .site-footer .footer-grid a:hover{color:#bfe6ff;transform:translateX(3px)}
 .site-footer .footer-brand-column .brand{width:max-content;margin-bottom:15px}
@@ -927,13 +937,14 @@ body{font-family:'Manrope',sans-serif;font-size:16px;font-weight:400;line-height
 .footer-socials span{color:#83ccff}
 .site-footer .footer-contact-column p{margin-bottom:13px;color:#c0cde0}
 .site-footer .footer-contact-column>a{color:#9dd7ff;font-weight:750}
-.site-footer .footer-contact-column span{font-size:.7rem}
-.site-footer .footer-bottom{margin:0;padding-top:20px;border-color:rgba(182,209,243,.12);color:#8495ad;font-size:.7rem}
+.site-footer .footer-contact-column span{font-size:.72rem}
+.site-footer .footer-bottom{margin:0;padding-top:20px;border-color:rgba(182,209,243,.12);color:#8495ad;font-size:.75rem}
+.site-footer .footer-bottom a{color:#a9d9ff;text-decoration:none;transition:color .2s}
+.site-footer .footer-bottom a:hover{color:#e1f3ff}
 @media(max-width:980px){
  #iletisim .contact-grid{grid-template-columns:1fr}
  #iletisim .map-frame,#iletisim .map-frame iframe{min-height:420px}
  .footer-contact-band{align-items:flex-start;flex-direction:column;min-height:0}
- .footer-band-orbit{right:4%;top:42%;width:260px}
  .site-footer .footer-grid{grid-template-columns:1.2fr 1fr;row-gap:34px}
 }
 @media(max-width:560px){
@@ -942,7 +953,6 @@ body{font-family:'Manrope',sans-serif;font-size:16px;font-weight:400;line-height
  .footer-band-copy h2{font-size:2.45rem}
  .footer-band-actions{width:100%;flex-direction:column}
  .footer-band-actions .btn{justify-content:center}
- .footer-band-orbit{right:-92px;top:46%;width:230px;opacity:.62}
  .site-footer .footer-grid{grid-template-columns:1fr 1fr;gap:27px 18px;padding:36px 0 28px}
  .site-footer .footer-brand-column{grid-column:1/-1}
  .site-footer .footer-bottom{flex-direction:column;gap:6px}
@@ -986,13 +996,15 @@ body{font-family:'Manrope',sans-serif;font-size:16px;font-weight:400;line-height
 .footer-location-icon{display:grid;place-items:center;width:42px;height:42px;flex:0 0 auto;border:1px solid rgba(111,194,255,.21);border-radius:13px;background:rgba(39,91,144,.2);color:#86d5f2}
 .footer-location-icon svg{width:20px;height:20px}
 .footer-location-copy{display:flex;flex-direction:column;min-width:0;gap:3px}
-.footer-location-copy small{color:#8aa5c3;font-size:.54rem;font-weight:800;letter-spacing:.13em}
-.footer-location-copy b{overflow:hidden;color:#e8f1fc;font-size:.79rem;text-overflow:ellipsis;white-space:nowrap}
-.footer-location-copy>span{color:#a3b5cd;font-size:.69rem}
-.footer-location-copy i{margin-top:4px;color:#82d5b8;font-size:.62rem;font-style:normal;font-weight:700}
+.footer-band-location{color:inherit;text-decoration:none;transition:border-color .2s,background .2s,transform .2s}
+.footer-band-location:hover{transform:translateY(-2px);border-color:rgba(121,192,255,.32);background:rgba(13,27,44,.76)}
+.footer-band-location:focus-visible,.site-footer a:focus-visible{outline:2px solid #78d6f3;outline-offset:3px}
+.footer-location-copy small{color:#8aa5c3;font-size:.7rem;font-weight:800;letter-spacing:.13em}
+.footer-location-copy b{overflow:hidden;color:#e8f1fc;font-size:.84rem;text-overflow:ellipsis;white-space:nowrap}
+.footer-location-copy>span{color:#a3b5cd;font-size:.74rem}
+.footer-location-copy i{margin-top:4px;color:#82d5b8;font-size:.68rem;font-style:normal;font-weight:700}
 .footer-band-actions{flex-direction:column;align-items:stretch;min-width:178px}
 .footer-band-actions .btn{justify-content:space-between}
-.footer-band-orbit{display:none}
 @media(max-width:980px){
  .contact-heading{align-items:flex-start;flex-direction:column;gap:9px;margin-bottom:24px}
  .contact-heading>p{max-width:560px}
@@ -1021,6 +1033,9 @@ body{font-family:'Manrope',sans-serif;font-size:16px;font-weight:400;line-height
  .footer-band-location,.footer-band-actions{grid-column:1;grid-row:auto;width:100%}
  .footer-band-actions{min-width:0;flex-direction:row;flex-wrap:wrap}
  .footer-band-actions .btn{flex:1;min-width:142px;justify-content:center;padding-inline:11px;font-size:.74rem}
+}
+@media(max-width:700px){
+ .site-footer .footer-grid>div:not(.footer-brand-column)>a{min-height:40px;padding-block:8px}
 }
 
 /* Responsive finish: accessible drawer, touch-first controls and a compact service tracker. */
@@ -1175,7 +1190,7 @@ body.locked{overscroll-behavior:none}
 }
 #top.hero .hero-copy h1{font-size:clamp(3.25rem,4.25vw,3.9rem)!important}
 #top.hero .hero-title-line-alt{white-space:nowrap}
-#top .hero-stage{min-height:550px}
+#top .hero-stage{min-height:0}
 @media(max-width:900px){#top .hero-stage{min-height:460px}}
 @media(max-width:760px){#top.hero .hero-copy h1{font-size:clamp(2.8rem,11.5vw,4.1rem)!important}#top .hero-stage{min-height:350px}}
 @media(max-width:380px){#top.hero .hero-copy h1{font-size:clamp(2.1rem,10.5vw,2.5rem)!important}#top .hero-stage{min-height:380px}}
@@ -1254,7 +1269,7 @@ body.locked{overscroll-behavior:none}
     </div>
     <div class="hero-stats reveal">
       <div><b>4.8 / 5</b><span>Google puanı</span></div>
-      <div><b>414</b><span>müşteri yorumu</span></div>
+      <div><b>415</b><span>müşteri yorumu</span></div>
       <div><b>Aynı gün</b><span>çoğu tamiratta</span></div>
     </div>
   </div>
@@ -1269,7 +1284,7 @@ body.locked{overscroll-behavior:none}
     <div class="info-divider"></div>
     <div class="info-chip">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-      <div><b>Açılış</b><span>12:30 — 20:00</span></div>
+      <div><b>Servis durumu</b><span class="live-store-status" id="storeStatus" data-open="false" role="status" aria-live="polite">Durum kontrol ediliyor</span></div>
     </div>
     <div class="info-divider"></div>
     <div class="info-chip">
@@ -1295,15 +1310,15 @@ body.locked{overscroll-behavior:none}
   </div>
 </div>
 
-<section class="proof-section" aria-label="Bulvar GSM müşteri değerlendirmeleri">
+<section class="proof-section" aria-label="Bulvar GSM servis göstergeleri">
   <div class="wrap">
     <div class="proof-heading reveal"><span class="kicker">GÜVENİN GÖSTERGELERİ</span><p>Her cihazda aynı özen, her müşteride aynı açıklık.</p></div>
     <div class="proof-grid">
-      <article class="proof-card reveal"><span class="proof-index">01 <i></i> GOOGLE PUANI</span><strong><span class="count-up" data-count="4.8" data-decimals="1">0</span><small> / 5</small></strong><span class="proof-note">Müşteri değerlendirmeleri</span></article>
-      <article class="proof-card reveal"><span class="proof-index">02 <i></i> TAMAMLANAN İŞLEMLER</span><strong><span class="count-up" data-count="20000">0</span><small>+</small></strong><span class="proof-note">Teknik işlem</span></article>
-      <article class="proof-card proof-card-note reveal"><span class="proof-index">03 <i></i> SERVİS YAKLAŞIMI</span><strong>Aynı gün<small>*</small></strong><span class="proof-note">Çoğu yaygın onarımda</span></article>
+      <article class="proof-card reveal"><span class="proof-index">01 <i></i> TAMAMLANAN İŞLEMLER</span><strong><span class="count-up" data-count="20000">0</span><small>+</small></strong><span class="proof-note">Teknik işlem</span></article>
+      <article class="proof-card proof-card-word reveal"><span class="proof-index">02 <i></i> GARANTİ</span><strong>Parça bazlı</strong><span class="proof-note">Süre, işlem ve parçaya göre değişir</span></article>
+      <article class="proof-card proof-card-note reveal"><span class="proof-index">03 <i></i> MARKA DESTEĞİ</span><strong>4<small>+</small></strong><span class="proof-note">Apple, Samsung, Huawei, General Mobile ve Android</span></article>
     </div>
-    <p class="proof-footnote">* Arıza türüne ve parça durumuna göre işlem süresi değişebilir.</p>
+    <p class="proof-footnote">Garanti kapsamı ve süresi, seçilen parça ve işlem türüne göre teslim sırasında netleştirilir.</p>
   </div>
 </section>
 
@@ -1312,7 +1327,7 @@ body.locked{overscroll-behavior:none}
     <div class="reveal">
       <div class="kicker">HAKKIMIZDA</div>
       <h2 class="title">Sakarya'nın güvendiği<br/>teknik servisi</h2>
-      <p class="copy">Yıllardır Adapazarı'nda hizmet veren Bulvar GSM, orijinal yedek parça kullanımı, şeffaf fiyatlandırma ve bekletmeden teslim prensibiyle çalışır. Her tamirat, deneyimli teknisyenlerimiz tarafından sizin gözünüzün önünde gerçekleştirilir.</p>
+      <p class="copy">Yıllardır Adapazarı'nda hizmet veren Bulvar GSM, şeffaf fiyatlandırma ve özenli teknik servis anlayışıyla çalışır. Arıza tespiti ve ücret bilgisi işlem öncesinde paylaşılır; onayınızın ardından cihazınız atölyede onarılır ve teslimden önce test edilir.</p>
       <div class="hours" style="margin-top:28px">
         <div class="row"><span>Pazartesi – Cumartesi</span><span>12:30 — 20:00</span></div>
         <div class="row"><span>Pazar</span><span>Kapalı</span></div>
@@ -1321,7 +1336,7 @@ body.locked{overscroll-behavior:none}
     <div class="feature-list reveal">
       <div class="feature">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7l-9-5Z"/></svg>
-        <div><h4>Orijinal yedek parça</h4><p>Tüm değişimlerde orijinal veya A kalite onaylı parça kullanılır.</p></div>
+        <div><h4>Parça seçeneklerinde şeffaflık</h4><p>Model ve talebe göre orijinal ya da A kalite parça seçeneklerini ve ücretini işlem öncesinde onayınıza sunarız.</p></div>
       </div>
       <div class="feature">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
@@ -1342,11 +1357,12 @@ body.locked{overscroll-behavior:none}
       <h2 class="title">Dört adımda tamir</h2>
     </div>
     <div class="process-grid">
-      <div class="process-step reveal"><span class="num">01</span><h4>Ücretsiz kontrol</h4><p>Cihazınızı teslim aldığımızda arızayı yerinde tespit ederiz.</p></div>
-      <div class="process-step reveal"><span class="num">02</span><h4>Fiyat onayı</h4><p>Net fiyatı sizinle paylaşır, onayınız olmadan işleme başlamayız.</p></div>
-      <div class="process-step reveal"><span class="num">03</span><h4>Tamir</h4><p>Deneyimli teknisyenlerimiz orijinal parçalarla işlemi tamamlar.</p></div>
-      <div class="process-step reveal"><span class="num">04</span><h4>Teslim</h4><p>Cihazınızı test ederek garantili şekilde size teslim ederiz.</p></div>
+      <div class="process-step reveal"><span class="num">01</span><span class="process-time">Yaklaşık 5 dk</span><h4>Ücretsiz kontrol</h4><p>İlk incelemede arızayı belirler, gerekli kontrolleri sizinle paylaşırız.</p></div>
+      <div class="process-step reveal"><span class="num">02</span><span class="process-time">Yaklaşık 5 dk</span><h4>Fiyat ve onay</h4><p>Ücreti ve tahmini işlem süresini açıklarız; onayınız olmadan başlamayız.</p></div>
+      <div class="process-step reveal"><span class="num">03</span><span class="process-time">Arızaya göre değişir</span><h4>Tamir</h4><p>Onayladığınız parça ve işlemle ilerler, tahmini süreyi başlamadan bildiririz.</p></div>
+      <div class="process-step reveal"><span class="num">04</span><span class="process-time">Test yaklaşık 5 dk</span><h4>Test ve teslim</h4><p>Temel işlevleri kontrol eder, cihazınızı garanti bilgisiyle birlikte teslim ederiz.</p></div>
     </div>
+    <p class="process-assurance"><i aria-hidden="true">✓</i> Ücretsiz ilk kontrol · Onayınız olmadan işlem yok</p>
   </div>
 </section>
 
@@ -1354,17 +1370,17 @@ body.locked{overscroll-behavior:none}
   <div class="wrap">
     <div class="status-panel reveal">
       <div class="status-copy">
-        <div class="kicker">SERVİS TAKİBİ</div>
-        <h2 class="title">Cihazınızın durumu<br/><span>bir mesaj uzağınızda.</span></h2>
-        <p>Takip kodunuzu paylaşın; servis ekibimiz güncel durumu WhatsApp üzerinden size iletsin.</p>
+        <div class="kicker">WHATSAPP ÜZERİNDEN DURUM BİLGİSİ</div>
+        <h2 class="title">Tamir durumunu<br/><span>WhatsApp’tan sorun.</span></h2>
+        <p>Bu alan canlı sorgulama yapmaz. Servis/iş emri kodunuzu hazır mesajla ekibimize iletin; güncel bilgiyi yanıtla paylaşalım.</p>
       </div>
       <form class="status-form" id="serviceStatusForm">
-        <label for="serviceTrackingCode">Servis takip kodu</label>
+        <label for="serviceOrderCode">Servis/iş emri kodu</label>
         <div class="status-input-row">
-          <input id="serviceTrackingCode" name="trackingCode" type="text" inputmode="text" autocomplete="off" maxlength="48" placeholder="Örn. BG-24018" required aria-describedby="statusHelp"/>
-          <button class="btn btn-blue" type="submit">Durumu sor <span aria-hidden="true">↗</span></button>
+          <input id="serviceOrderCode" name="serviceOrderCode" type="text" inputmode="text" autocomplete="off" maxlength="48" placeholder="Örn. BG-24018" required aria-describedby="statusHelp"/>
+          <button class="btn btn-blue" type="submit">WhatsApp’tan sor <span aria-hidden="true">↗</span></button>
         </div>
-        <p class="status-help" id="statusHelp">Kodunuz WhatsApp mesajına eklenir; sorgulamayı ekibimiz yanıtlar.</p>
+        <p class="status-help" id="statusHelp">Kodunuz WhatsApp taslağına eklenir; mesajı siz gönderirsiniz, ekibimiz dönüş yapar.</p>
       </form>
       <div class="status-orbit" aria-hidden="true"><i></i><b></b></div>
     </div>
@@ -1389,7 +1405,11 @@ body.locked{overscroll-behavior:none}
       </div>
       <div class="svc-card reveal">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9"/></svg>
-        <h4>Kamera &amp; arka cam</h4><p>Bulanık görüntü, odaklanmama ve kırık arka cam onarımı.</p>
+        <h4>Kamera onarımı</h4><p>Bulanık görüntü, odak sorunları ve kamera arızaları için teknik destek.</p>
+      </div>
+      <div class="svc-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 9h2v2H9zM14 13h2v2h-2zM2 8h3M2 12h3M2 16h3M19 8h3M19 12h3M19 16h3M8 2v3M12 2v3M16 2v3M8 19v3M12 19v3M16 19v3"/></svg>
+        <h4>Anakart tamiri</h4><p>Güç, kısa devre ve kart kaynaklı arızalarda detaylı onarım.</p>
       </div>
       <div class="svc-card reveal">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12a8 8 0 0 1 14-5"/><path d="M20 12a8 8 0 0 1-14 5"/><path d="M4 7v5h5M20 17v-5h-5"/></svg>
@@ -1402,6 +1422,10 @@ body.locked{overscroll-behavior:none}
       <div class="svc-card reveal">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="2"/><line x1="3" y1="11" x2="21" y2="11"/></svg>
         <h4>Aksesuar &amp; yedek parça</h4><p>Kılıf, ekran koruyucu, şarj cihazı ve orijinal yedek parça satışı.</p>
+      </div>
+      <div class="svc-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4.5 13h6L10 22l9.5-12h-6L13 2Z"/></svg>
+        <h4>Şarj soketi ve bağlantı</h4><p>Şarj almama, temassızlık ve bağlantı sorunları için kontrol ve onarım.</p>
       </div>
     </div>
   </div>
@@ -1455,27 +1479,27 @@ body.locked{overscroll-behavior:none}
       <button class="carousel-arrow prev" id="carouselPrev" type="button" aria-label="Önceki tamir videosu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
       <div class="video-track" id="videoTrack">
       <div class="video-card reveal" data-video="assets/repairs/15-pro-max-ekran-degisimi.mp4">
-        <div class="poster"><img src="assets/repairs/15-pro-max-ekran-degisimi.webp" alt="15 Pro Max ekran değişimi videosundan kapak görüntüsü"></div>
+        <div class="poster"><img src="assets/repairs/15-pro-max-ekran-degisimi.webp" alt="15 Pro Max ekran değişimi videosundan kapak görüntüsü" loading="lazy" decoding="async"></div>
         <div class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span></div>
         <div class="label">15 Pro Max Ekran Değişim</div>
       </div>
       <div class="video-card reveal" data-video="assets/repairs/lazer-tamir.mp4">
-        <div class="poster"><img src="assets/repairs/lazer-tamir.webp" alt="Lazer tamir videosundan kapak görüntüsü"></div>
+        <div class="poster"><img src="assets/repairs/lazer-tamir.webp" alt="Lazer tamir videosundan kapak görüntüsü" loading="lazy" decoding="async"></div>
         <div class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span></div>
         <div class="label">Lazer Tamir</div>
       </div>
       <div class="video-card reveal" data-video="assets/repairs/ipad-batarya-degisimi.mp4">
-        <div class="poster"><img src="assets/repairs/ipad-batarya-degisimi.webp" alt="iPad batarya değişimi videosundan kapak görüntüsü"></div>
+        <div class="poster"><img src="assets/repairs/ipad-batarya-degisimi.webp" alt="iPad batarya değişimi videosundan kapak görüntüsü" loading="lazy" decoding="async"></div>
         <div class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span></div>
         <div class="label">IPAD Batarya Değişim</div>
       </div>
       <div class="video-card reveal" data-video="assets/repairs/17-pro-max-ekran-degisimi.mp4">
-        <div class="poster"><img src="assets/repairs/17-pro-max-ekran-degisimi.webp" alt="17 Pro Max ekran değişimi videosundan kapak görüntüsü"></div>
+        <div class="poster"><img src="assets/repairs/17-pro-max-ekran-degisimi.webp" alt="17 Pro Max ekran değişimi videosundan kapak görüntüsü" loading="lazy" decoding="async"></div>
         <div class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span></div>
         <div class="label">17 Pro Max Ekran Değişim</div>
       </div>
       <div class="video-card reveal" data-video="assets/repairs/15-pro-arka-cam.mp4">
-        <div class="poster"><img src="assets/repairs/15-pro-arka-cam.webp" alt="15 Pro arka cam videosundan kapak görüntüsü"></div>
+        <div class="poster"><img src="assets/repairs/15-pro-arka-cam.webp" alt="15 Pro arka cam videosundan kapak görüntüsü" loading="lazy" decoding="async"></div>
         <div class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span></div>
         <div class="label">15 Pro Arka Cam</div>
       </div>
@@ -1493,24 +1517,39 @@ body.locked{overscroll-behavior:none}
         <div class="review-score">4.8</div>
         <div>
           <div class="stars">★★★★★</div>
-          <p style="color:var(--muted);font-size:.86rem;margin-top:4px">Google Haritalar’da 414 değerlendirme</p>
+          <p style="color:var(--muted);font-size:.86rem;margin-top:4px">Google Haritalar’da 415 değerlendirme</p>
         </div>
+        <a class="btn btn-ghost review-write" href="https://search.google.com/local/writereview?placeid=ChIJ0yhsiHazzBQRr6aM_oaczqU" target="_blank" rel="noopener">Siz de yorum yazın <span aria-hidden="true">↗</span></a>
       </div>
     </div>
     <div class="review-grid">
       <article class="review-card reveal">
         <div class="review-card-meta"><span class="stars" aria-label="5 yıldız">★★★★★</span><span>5 yıldız · Google</span></div>
+        <span class="review-service">Batarya · Şarj soketi</span>
         <p>“Bir saatte bitirip orjinali gibi teslim ettiler ve detayla bilgilendirdiler.”</p>
         <b>Ahmet Erhan</b>
       </article>
       <article class="review-card reveal">
         <div class="review-card-meta"><span class="stars" aria-label="5 yıldız">★★★★★</span><span>5 yıldız · Google</span></div>
+        <span class="review-service">Genel servis deneyimi</span>
         <p>“Gerçekten çok ilgililer, dürüst, güler yüzlü, çözümcü arkadaşlar.”</p>
         <b>rüya fak</b>
       </article>
+      <article class="review-card reveal">
+        <div class="review-card-meta"><span class="stars" aria-label="5 yıldız">★★★★★</span><span>5 yıldız · Google</span></div>
+        <span class="review-service">Ekran değişimi</span>
+        <p>“iPhone 11 Pro ekranı ve diğer telefonumun ekranını çok kısa sürede değiştirdiler.”</p>
+        <b>Musa Güngör</b>
+      </article>
+      <article class="review-card reveal">
+        <div class="review-card-meta"><span class="stars" aria-label="5 yıldız">★★★★★</span><span>5 yıldız · Google</span></div>
+        <span class="review-service">Onarım deneyimi</span>
+        <p>“Telefonumdaki arızayı ben orada beklerken tamir ettiler.”</p>
+        <b>mtb</b>
+      </article>
       <a class="review-card review-more reveal" href="https://www.google.com/maps/search/?api=1&query=Bulvar+GSM+Adapazari&query_place_id=ChIJ0yhsiHazzBQRr6aM_oaczqU" target="_blank" rel="noopener">
         <span class="review-more-icon" aria-hidden="true">G</span>
-        <b>414 yorumun tamamını Google’da gör</b>
+        <b>Google’daki yorumların tamamını gör</b>
         <span>Güncel değerlendirmeler ve işletme yanıtları</span>
         <span class="review-more-link">Google Haritalar’a git <span aria-hidden="true">↗</span></span>
       </a>
@@ -1527,15 +1566,27 @@ body.locked{overscroll-behavior:none}
     <div class="faq reveal">
       <div class="faq-item">
         <button class="faq-q">Değişen parçalarda garanti var mı?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-        <div class="faq-a"><p>Evet, değiştirilen tüm parçalar garanti kapsamındadır. Garanti süresi parça türüne göre değişir, teslimat sırasında bilgi veririz.</p></div>
+        <div class="faq-a"><p>Garanti kapsamı ve süresi, seçilen parça ile işlem türüne göre değişebilir. Kullanılacak parçayı ve garanti koşullarını onayınızdan önce netleştirir, teslimde garanti bilgisini paylaşırız.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Tamir ne kadar sürer?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
         <div class="faq-a"><p>Ekran, batarya ve şarj soketi gibi işlemlerin çoğu aynı gün, çoğunlukla dakikalar içinde tamamlanır. Detaylı arızalarda süre önceden bildirilir.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Verilerim tamirat sırasında güvende mi?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-        <div class="faq-a"><p>Verilerinize izniniz olmadan erişilmez veya müdahale edilmez. Yazılım işlemlerinde önceden bilgilendirme yapılır.</p></div>
+        <button class="faq-q">Tamir sırasında verilerim silinir mi?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><p>Standart donanım onarımında veri silme işlemi hedeflenmez; ancak cihaz ve arızaya bağlı veri kaybı riski tamamen ortadan kaldırılamaz. Mümkünse önceden yedek alın. Veri kaybı riski taşıyan yazılım adımları varsa işlemden önce bilgi ve onayınızı alırız.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Fiyat nasıl belirleniyor?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><p>Fiyat; cihaz modeli, arızanın kaynağı, seçilen parça ve işçilik ihtiyacına göre belirlenir. İlk arıza tespiti ücretsizdir; işlem ve tahmini süre bilgisi onayınızdan önce paylaşılır.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Yedek cihaz veriyor musunuz?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><p>Yedek cihaz imkânı mevcut duruma göre değişebilir. Servise gelmeden önce telefonla sorarak o günkü uygunluğu öğrenebilirsiniz.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Cihaz tamir edilemezse ücret alınıyor mu?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><p>İlk arıza tespiti ücretsizdir. Tamir mümkün olmazsa uygulanabilecek bir işçilik veya ek işlem ücreti varsa, tutarı işlemden önce bildiririz; onayınız olmadan ücretli işleme başlamayız.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Hangi ödeme yöntemlerini kabul ediyorsunuz?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
@@ -1633,12 +1684,12 @@ body.locked{overscroll-behavior:none}
       </div>
       <div class="footer-band-actions">
         <a class="btn btn-blue" href="tel:+905063857754">0506 385 77 54 <span aria-hidden="true">↗</span></a>
-        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.7744313%2C30.4024168&amp;destination_place_id=ChIJ0yhsiHazzBQRr6aM_oaczqU" target="_blank" rel="noopener">Yol tarifi al <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-ghost" href="https://wa.me/905063857754?text=Merhaba%2C%20telefon%20tamiri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp’tan yazın <span aria-hidden="true">↗</span></a>
       </div>
-      <div class="footer-band-location">
+      <a class="footer-band-location" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.7744313%2C30.4024168&amp;destination_place_id=ChIJ0yhsiHazzBQRr6aM_oaczqU" target="_blank" rel="noopener" aria-label="Bulvar GSM için Google Haritalar’da yol tarifi al">
         <span class="footer-location-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
-        <span class="footer-location-copy"><small>SERVİS NOKTASI</small><b>Semerciler · Adapazarı</b><span>Abasıyanık İş Hanı</span><i>Pzt — Cmt · 12:30 — 20:00</i></span>
-      </div>
+        <span class="footer-location-copy"><small>SERVİS NOKTASI · YOL TARİFİ</small><b>Semerciler · Adapazarı</b><span>Abasıyanık İş Hanı</span><i id="openState">Durum kontrol ediliyor</i></span>
+      </a>
     </div>
     <div class="footer-grid">
       <div class="footer-brand-column">
@@ -1651,22 +1702,23 @@ body.locked{overscroll-behavior:none}
           <a href="https://www.instagram.com/bulvargsmteknik/" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a>
           <a href="https://wa.me/905063857754" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a>
         </div>
+        <p class="privacy-note">Kişisel veriler ve gizlilik hakkında bilgi veya talep için <a href="#iletisim" data-goto="#iletisim">bizimle iletişime geçin</a>.</p>
       </div>
       <div>
         <h5>KEŞFEDİN</h5>
-        <a data-goto="#hakkimizda">Hakkımızda</a>
-        <a data-goto="#hizmetler">Hizmetler</a>
-        <a data-goto="#magaza">Mağaza</a>
-        <a data-goto="#videolar">Tamir videoları</a>
-        <a data-goto="#yorumlar">Müşteri yorumları</a>
+        <a href="#hakkimizda" data-goto="#hakkimizda">Hakkımızda</a>
+        <a href="#hizmetler" data-goto="#hizmetler">Hizmetler</a>
+        <a href="#magaza" data-goto="#magaza">Mağaza</a>
+        <a href="#videolar" data-goto="#videolar">Tamir videoları</a>
+        <a href="#yorumlar" data-goto="#yorumlar">Müşteri yorumları</a>
       </div>
       <div>
         <h5>HİZMETLER</h5>
-        <a data-goto="#hizmetler">Ekran ve batarya</a>
-        <a data-goto="#hizmetler">Kamera ve arka cam</a>
-        <a data-goto="#hizmetler">Yazılım ve veri</a>
-        <a data-goto="#hizmetler">Anakart onarımı</a>
-        <a data-goto="#hizmetler">Aksesuarlar</a>
+        <a href="https://wa.me/905063857754?text=Merhaba%2C%20ekran%20veya%20batarya%20de%C4%9Fi%C5%9Fimi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Ekran ve batarya</a>
+        <a href="https://wa.me/905063857754?text=Merhaba%2C%20kamera%20veya%20arka%20cam%20onar%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Kamera ve arka cam</a>
+        <a href="https://wa.me/905063857754?text=Merhaba%2C%20yaz%C4%B1l%C4%B1m%20ve%20veri%20deste%C4%9Fi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Yazılım ve veri</a>
+        <a href="https://wa.me/905063857754?text=Merhaba%2C%20anakart%20onar%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Anakart onarımı</a>
+        <a href="https://wa.me/905063857754?text=Merhaba%2C%20aksesuarlar%20hakk%C4%B1nda%20%C3%BCr%C3%BCn%20ve%20stok%20bilgisi%20almak%20istiyorum." target="_blank" rel="noopener">Aksesuarlar</a>
       </div>
       <div class="footer-contact-column">
         <h5>ATÖLYE</h5>
@@ -1676,8 +1728,8 @@ body.locked{overscroll-behavior:none}
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year"></span> Bulvar GSM</span>
-      <span>Cep Telefonu Tamir Atölyesi · Adapazarı, Sakarya</span>
+      <span>© <span id="year">2026</span> Bulvar GSM</span>
+      <a href="#top" data-goto="#top">Yukarı çık ↑</a>
     </div>
   </div>
 </footer>
@@ -1696,6 +1748,27 @@ body.locked{overscroll-behavior:none}
   var heroSection = document.getElementById('top');
   var backgroundVideo = document.getElementById('siteBackgroundVideo');
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var storeStatus = document.getElementById('storeStatus');
+  var footerOpenState = document.getElementById('openState');
+  function updateStoreStatus(){
+    if(!storeStatus && !footerOpenState) return;
+    var parts = new Intl.DateTimeFormat('en-US',{timeZone:'Europe/Istanbul',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+    var values = {};
+    parts.forEach(function(part){ values[part.type] = part.value; });
+    var minuteOfDay = Number(values.hour) * 60 + Number(values.minute);
+    var isOpen = values.weekday !== 'Sun' && minuteOfDay >= 750 && minuteOfDay < 1200;
+    var label = isOpen ? 'Şu an açık' : 'Şu an kapalı';
+    if(storeStatus){
+      storeStatus.dataset.open = isOpen ? 'true' : 'false';
+      storeStatus.textContent = label;
+    }
+    if(footerOpenState){
+      footerOpenState.textContent = label + ' · Pzt–Cmt 12:30–20:00';
+      footerOpenState.style.color = isOpen ? '#6de0bd' : '#ff9aa8';
+    }
+  }
+  updateStoreStatus();
+  window.setInterval(updateStoreStatus,60000);
   var ticking = false;
   function updateScrollDecor(){
     var scrollable = document.documentElement.scrollHeight - window.innerHeight;
@@ -1776,9 +1849,15 @@ body.locked{overscroll-behavior:none}
   });
 
   document.querySelectorAll('[data-goto]').forEach(function(el){
-    el.addEventListener('click', function(){
+    el.addEventListener('click', function(event){
+      if(el.tagName === 'A' && (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)) return;
       var target = document.querySelector(el.getAttribute('data-goto'));
       if(target){
+        if(el.tagName === 'A'){
+          event.preventDefault();
+          var hash = el.getAttribute('href');
+          if(hash && window.location.hash !== hash) window.history.pushState(null,'',hash);
+        }
         if(panel.classList.contains('open')) closeMobileMenu(false);
         target.scrollIntoView({ behavior:'smooth' });
       }
@@ -1787,21 +1866,21 @@ body.locked{overscroll-behavior:none}
 
   var serviceStatusForm = document.getElementById('serviceStatusForm');
   if(serviceStatusForm){
-    var trackingCodeInput = document.getElementById('serviceTrackingCode');
+    var serviceOrderCodeInput = document.getElementById('serviceOrderCode');
     var statusHelp = document.getElementById('statusHelp');
-    trackingCodeInput.addEventListener('input', function(){ trackingCodeInput.setCustomValidity(''); });
+    serviceOrderCodeInput.addEventListener('input', function(){ serviceOrderCodeInput.setCustomValidity(''); });
     serviceStatusForm.addEventListener('submit', function(event){
       event.preventDefault();
-      var trackingCode = trackingCodeInput.value.trim();
-      if(!trackingCode){
-        trackingCodeInput.setCustomValidity('Lütfen servis takip kodunuzu yazın.');
-        trackingCodeInput.reportValidity();
+      var serviceOrderCode = serviceOrderCodeInput.value.trim();
+      if(!serviceOrderCode){
+        serviceOrderCodeInput.setCustomValidity('Lütfen servis/iş emri kodunuzu yazın.');
+        serviceOrderCodeInput.reportValidity();
         return;
       }
-      var message = 'Merhaba, cihazımın servis durumunu öğrenmek istiyorum. Takip kodum: ' + trackingCode;
+      var message = 'Merhaba, cihazımın tamir durumunu sormak istiyorum. Servis/iş emri kodum: ' + serviceOrderCode;
       var whatsappUrl = 'https://wa.me/905063857754?text=' + encodeURIComponent(message);
       window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-      statusHelp.textContent = 'Takip kodunuz WhatsApp mesajına eklendi. Göndererek servis ekibimize iletebilirsiniz.';
+      statusHelp.textContent = 'Hazır mesaj WhatsApp’ta açıldı. Durum bilgisi, servis ekibimiz yanıt verdiğinde iletilir.';
     });
   }
 
