@@ -1189,12 +1189,12 @@ body.locked{overscroll-behavior:none}
  .status-orbit{display:none}
 }
 #top.hero .hero-copy h1{font-size:clamp(3.25rem,4.25vw,3.9rem)!important}
-#top.hero .hero-title-line-alt{white-space:nowrap}
+#top.hero .hero-title-line-alt{white-space:nowrap;margin-top:.05em}
 #top .hero-stage{min-height:0}
 @media(max-width:900px){#top .hero-stage{min-height:460px}}
 @media(max-width:760px){#top.hero .hero-copy h1{font-size:clamp(2.8rem,11.5vw,4.1rem)!important}#top .hero-stage{min-height:350px}}
 @media(max-width:380px){#top.hero .hero-copy h1{font-size:clamp(2.1rem,10.5vw,2.5rem)!important}#top .hero-stage{min-height:380px}}
-</style>
+/* Mobile performance: preserve video motion while reducing expensive effects on phones. */ @media(max-width:760px){#top .hero-stage{height:auto;min-height:0!important}#top .hero-background video{filter:brightness(.76) saturate(.84);transform:translateZ(0);backface-visibility:hidden}#top .hero-background-shade{background:linear-gradient(180deg,rgba(5,10,18,.68),rgba(5,11,20,.6) 42%,rgba(5,10,18,.8)),radial-gradient(ellipse at 52% 30%,rgba(20,55,95,.12),transparent 68%);backdrop-filter:none;-webkit-backdrop-filter:none}#top .hero-stage-glow{display:none}.hero::after,.work-motion-frame::after,.work-motion-glow,.motion-live-dot,.info-strip::before{animation:none!important}.hero::after{filter:none}.work-motion-glow{filter:none;opacity:.65;background:radial-gradient(circle,rgba(53,130,220,.16),transparent 70%)}.work-motion-video{backface-visibility:hidden;transform:translateZ(0)}body{padding-bottom:calc(82px + env(safe-area-inset-bottom))}} @media(max-width:380px){#top .hero-stage{min-height:0!important}} </style>
 </head>
 <body>
 
@@ -1499,9 +1499,9 @@ body.locked{overscroll-behavior:none}
         <div class="label">17 Pro Max Ekran Değişim</div>
       </div>
       <div class="video-card reveal" data-video="assets/repairs/15-pro-arka-cam.mp4">
-        <div class="poster"><img src="assets/repairs/15-pro-arka-cam.webp" alt="15 Pro arka cam videosundan kapak görüntüsü" loading="lazy" decoding="async"></div>
+        <div class="poster"><img src="assets/repairs/15-pro-arka-cam.webp" alt="15 Pro Max arka cam değişimi videosundan kapak görüntüsü" loading="lazy" decoding="async"></div>
         <div class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span></div>
-        <div class="label">15 Pro Arka Cam</div>
+        <div class="label">15 Pro Max Arka Cam Değişim</div>
       </div>
       </div>
       <button class="carousel-arrow next" id="carouselNext" type="button" aria-label="Sonraki tamir videosu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
