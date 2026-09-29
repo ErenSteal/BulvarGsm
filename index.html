@@ -6,10 +6,10 @@
 <meta content="#0b0f19" name="theme-color"/>
 <meta content="Bulvar GSM — Adapazarı Sakarya'da cep telefonu tamiri ve teknik servis. Ekran, batarya, yazılım ve daha fazlası." name="description"/>
 <title>Bulvar GSM | Cep Telefonu Tamir &amp; Teknik Servis</title>
-<link href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwYTBkMTMiLz48cmVjdCB4PSIyMCIgeT0iMTAiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0NCIgcng9IjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJmNmZlZCIgc3Ryb2tlLXdpZHRoPSIzIi8+PGNpcmNsZSBjeD0iMzIiIGN5PSI0NyIgcj0iMiIgZmlsbD0iIzJmNmZlZCIvPjwvc3ZnPg==" rel="icon" type="image/svg+xml"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1326'/%3E%3Cpath d='M18 14h17c10 0 15 5 15 13 0 5-2 8-6 10 5 2 8 6 8 12 0 8-6 13-16 13H18V14zm12 10v9h5c3 0 5-2 5-5s-2-4-5-4h-5zm0 18v10h6c4 0 6-2 6-5s-2-5-6-5h-6z' fill='%233d7dff'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
 :root{
   --bg:#0d1326;
@@ -50,20 +50,18 @@ button{font:inherit;border:0;background:none;color:inherit;cursor:pointer}
 .nav.scrolled{padding:12px 0;background:rgba(10,13,19,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .nav-inner{width:min(1220px,calc(100% - 44px));margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{display:flex;align-items:center;gap:10px}
-.brand .mark{width:38px;height:38px;border-radius:10px;background:var(--bg-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
-.brand .mark svg{width:20px;height:20px}
-.brand b{font-family:'Manrope',sans-serif;font-size:1.15rem;letter-spacing:-.035em}
-.brand b span{color:var(--blue-l)}
+.brand b{font-family:'Space Grotesk','Manrope',sans-serif;font-size:1.18rem;font-weight:700;letter-spacing:-.055em}
+.brand b span{color:var(--blue)}
 .brand small{display:block;margin-top:2px;color:var(--muted);font-size:.62rem;letter-spacing:.1em}
 .nav-links{display:flex;align-items:center;gap:2px}
 .nav-links button{position:relative;padding:9px 14px;border-radius:999px;font-size:.86rem;color:var(--muted);transition:.2s}
 .nav-links button:hover{color:var(--text);background:rgba(255,255,255,.07)}
 .nav-links button:active{transform:scale(.94)}
-.nav-links .nav-shop-link{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:999px;font-size:.86rem;color:var(--blue-l);white-space:nowrap;transition:.2s}
-.nav-links .nav-shop-link:hover{color:#a5f0ff;background:rgba(94,231,255,.08)}
+.nav-links .nav-shop-link{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:999px;font-size:.86rem;color:var(--blue);white-space:nowrap;transition:.2s}
+.nav-links .nav-shop-link:hover{color:#77a6ff;background:rgba(61,125,255,.09)}
 .nav-shop-link svg{width:13px;height:13px;flex:none;transition:transform .2s var(--ease)}
 .nav-shop-link:hover svg{transform:translate(2px,-2px)}
-.mobile-panel .nav-shop-link{display:flex;align-items:center;justify-content:center;gap:8px;color:var(--blue-l)}
+.mobile-panel .nav-shop-link{display:flex;align-items:center;justify-content:center;gap:8px;color:var(--blue)}
 .mobile-panel .nav-shop-link svg{width:14px;height:14px}
 .btn:active{transform:scale(.96)}
 .nav-cta{display:flex;align-items:center;gap:10px}
@@ -90,6 +88,8 @@ button{font:inherit;border:0;background:none;color:inherit;cursor:pointer}
 .hero h1 .accent{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero p{max-width:520px;margin-top:22px;color:var(--muted);font-size:1.02rem}
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-call-emoji{display:inline}
+.hero-call-label{display:inline}
 .hero-stats{display:flex;gap:34px;margin-top:48px}
 .hero-stats div b{display:block;font-family:'Manrope',sans-serif;font-size:1.7rem}
 .hero-stats div span{color:var(--muted);font-size:.82rem}
@@ -220,6 +220,11 @@ footer{border-top:1px solid var(--line);padding:56px 0 30px}
 .modal-backdrop.open{display:flex}
 .modal-box{position:relative;width:min(400px,90vw);aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#000}
 .modal-box video{width:100%;height:100%;object-fit:cover}
+.modal-box iframe{display:none;width:100%;height:100%;border:0;background:#05080d}
+.modal-box.instagram-mode video{display:none}
+.modal-box.instagram-mode iframe{display:block}
+.instagram-modal-link{display:none;position:absolute;z-index:5;top:12px;left:12px;align-items:center;justify-content:center;min-height:40px;padding:0 13px;border:1px solid rgba(180,215,250,.28);border-radius:11px;background:rgba(8,15,27,.84);color:#eaf4ff;font-size:.72rem;font-weight:800;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.modal-box.instagram-mode .instagram-modal-link{display:flex}
 .modal-close{position:absolute;top:-46px;right:0;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--text)}
 
 @media (max-width:980px){
@@ -252,7 +257,6 @@ body{background:radial-gradient(ellipse at 80% 5%,rgba(39,76,148,.2),transparent
 .wrap{width:min(1240px,calc(100% - 64px))}
 .nav{padding:16px 0}
 .nav.scrolled{background:rgba(8,13,24,.84);border-color:rgba(205,222,255,.1)}
-.brand .mark{background:linear-gradient(145deg,#152744,#0c1422);border-color:rgba(118,228,255,.18)}
 .hero{padding-top:154px;padding-bottom:84px;min-height:760px;display:flex;align-items:center}
 .hero::before{top:-210px;right:-140px;width:760px;height:760px;background:radial-gradient(circle,rgba(45,104,222,.22),transparent 68%)}
 .hero::after{bottom:-300px;left:18%;width:620px;height:480px;background:radial-gradient(ellipse,rgba(45,179,205,.1),transparent 68%)}
@@ -326,6 +330,9 @@ body{background:radial-gradient(ellipse at 80% 5%,rgba(39,76,148,.2),transparent
 .video-card .poster::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 40px,rgba(193,215,255,.045) 41px 42px)}
 .video-card .poster::before{display:none}
 .video-card .poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.video-card .poster.instagram-cover-pending{background:radial-gradient(ellipse at 50% 40%,rgba(74,132,223,.38),transparent 48%),linear-gradient(155deg,#1a2b42,#0b111b 76%)}
+.reel-cover-placeholder{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:11px;color:#9bd9ff;font-size:.58rem;font-weight:800;letter-spacing:.14em}
+.reel-cover-placeholder svg{width:58px;height:58px;padding:15px;border:1px solid rgba(168,207,255,.24);border-radius:19px;background:rgba(7,15,26,.48);color:#88cfff}
 .video-card:hover .poster img{transform:scale(1.045)}
 .video-card .poster svg{position:relative;z-index:1;width:60px;height:60px;padding:15px;border:1px solid rgba(168,207,255,.24);border-radius:19px;background:rgba(7,15,26,.48);color:#88cfff}
 .video-card .play{background:linear-gradient(0deg,rgba(4,9,17,.8),transparent 54%,rgba(4,9,17,.12))}
@@ -403,9 +410,8 @@ body{background:radial-gradient(ellipse at 80% 5%,rgba(39,76,148,.2),transparent
  .nav{padding-top:max(12px,env(safe-area-inset-top))}
  .nav-inner{width:calc(100% - 32px);gap:10px}
  .brand{gap:8px}
- .brand .mark{width:36px;height:36px}
  .brand b{font-size:1.02rem}
- .brand small{font-size:.57rem}
+ .brand small{font-size:.5rem;letter-spacing:.075em;white-space:nowrap}
  .nav-cta{gap:8px}
  .nav-cta .btn-blue{padding:10px 13px;font-size:.78rem}
  .burger{width:40px;height:40px}
@@ -568,11 +574,13 @@ body{background:#080f1b}
  .repair-marquee{padding:12px 0}
  .repair-marquee-group{gap:18px;padding-right:18px;font-size:.58rem}
  .cta-section{padding-top:4px}
- .cta-panel{min-height:0;padding:35px 25px 220px;border-radius:23px}
- .cta-copy h2{font-size:2.65rem}
- .cta-actions{position:relative;z-index:3;flex-direction:column;align-items:stretch}
- .cta-actions .btn{justify-content:center}
- .cta-visual{right:calc(50% - 86px);top:auto;bottom:-52px;width:172px;height:220px;transform:none;opacity:.83}
+ .cta-panel{min-height:0;padding:40px 22px 202px;border-radius:23px}
+ .cta-copy{width:100%;max-width:none}
+ .cta-copy h2{margin:14px 0 12px;font-size:clamp(2.2rem,10vw,2.65rem);line-height:1.02}
+ .cta-copy p{max-width:38rem;font-size:.9rem;line-height:1.65}
+ .cta-actions{position:relative;z-index:3;flex-direction:column;align-items:stretch;gap:9px;margin-top:18px}
+ .cta-actions .btn{min-height:48px;justify-content:center;padding-inline:14px}
+ .cta-visual{right:calc(50% - 86px);top:auto;bottom:-44px;width:172px;height:200px;transform:none;opacity:.72}
  .cta-phone{width:94px;height:177px;border-radius:21px}
  .cta-phone span{inset:16px 6px;border-radius:14px}
  .cta-orbit-one{width:330px;right:calc(50% - 165px);top:auto;bottom:-80px;transform:none}
@@ -850,6 +858,10 @@ footer{background:rgba(5,10,18,.46);backdrop-filter:blur(18px);-webkit-backdrop-
 .process{background:radial-gradient(ellipse at 8% 52%,rgba(36,82,135,.16),transparent 39%),linear-gradient(180deg,rgba(10,19,32,.68),rgba(8,15,26,.28))}
 .process> .wrap>.reveal,.services> .wrap>.reveal{max-width:680px}
 .process-grid,.services .svc-grid{margin-top:34px}
+.services> .wrap>.reveal{max-width:920px;margin-inline:auto;text-align:center}
+.services> .wrap>.reveal .kicker{justify-content:center}
+.services> .wrap>.reveal .title{max-width:850px;margin-inline:auto}
+.services> .wrap>.reveal .copy{max-width:760px;margin:16px auto 0;text-align:center}
 .process-step{min-height:190px;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s}
 .process-step:hover{transform:translateY(-5px);border-color:rgba(111,195,255,.34);box-shadow:0 20px 45px rgba(0,0,0,.2)}
 .process-step .num{width:38px;height:38px;display:grid;place-items:center;margin:0 0 12px;border:1px solid rgba(108,195,255,.2);border-radius:12px;background:rgba(64,141,213,.09);font-family:'Manrope',sans-serif}
@@ -900,12 +912,14 @@ footer{background:rgba(5,10,18,.46);backdrop-filter:blur(18px);-webkit-backdrop-
 
 /* AppFix-inspired typography: bold geometric display, calm readable body copy. */
 body{font-family:'Manrope',sans-serif;font-size:16px;font-weight:400;line-height:1.7;letter-spacing:-.014em}
-.disp,.title,h1,h2,h3,h4,h5,.brand b{font-family:'Manrope',sans-serif}
+.disp,.title,h1,h2,h3,h4,h5{font-family:'Manrope',sans-serif}
+.brand b{font-family:'Space Grotesk','Manrope',sans-serif}
 .title{font-weight:750;line-height:1.02;letter-spacing:-.06em}
 .kicker{font-weight:800;letter-spacing:.13em}
 .copy,.hero p,.feature p,.svc-card p,.process-step p,.review-card>p,.faq-a p,.info-row span,.footer-grid p{line-height:1.75;letter-spacing:-.015em}
 .nav-links button,.btn,.faq-q{font-family:'Manrope',sans-serif;font-weight:700;letter-spacing:-.025em}
 .brand b{font-weight:800;letter-spacing:-.045em}
+.brand b span{color:var(--blue)}
 .hero h1,.cta-copy h2{font-weight:800;letter-spacing:-.075em}
 .hero-panel-intro h2,.shop-copy .title{font-weight:750;letter-spacing:-.06em}
 #iletisim .contact-grid{grid-template-columns:minmax(350px,.9fr) minmax(0,1.1fr)}
@@ -947,6 +961,7 @@ body{font-family:'Manrope',sans-serif;font-size:16px;font-weight:400;line-height
  .footer-contact-band{align-items:flex-start;flex-direction:column;min-height:0}
  .site-footer .footer-grid{grid-template-columns:1.2fr 1fr;row-gap:34px}
 }
+@media(min-width:901px) and (max-width:980px){.services .svc-card:last-child{grid-column:1/-1;width:calc(50% - 10px);justify-self:center}}
 @media(max-width:560px){
  #iletisim .map-frame,#iletisim .map-frame iframe{min-height:340px}
  .footer-contact-band{gap:22px;padding:25px 20px;border-radius:21px}
@@ -1048,7 +1063,7 @@ body{font-family:'Manrope',sans-serif;font-size:16px;font-weight:400;line-height
 .mobile-panel .mobile-panel-close{display:grid;place-items:center;width:46px;height:46px;min-height:46px;padding:0;border:1px solid rgba(192,216,248,.16);border-radius:14px;background:rgba(255,255,255,.035);color:#eaf3ff;font-size:1.6rem;line-height:1}
 .mobile-panel button[data-goto]{min-height:54px;padding:14px 12px;border:1px solid transparent;border-radius:13px;font-size:1rem;font-weight:700}
 .mobile-panel button[data-goto]:hover,.mobile-panel button[data-goto]:focus-visible{border-color:rgba(118,228,255,.16);background:rgba(99,153,221,.08);outline:none}
-.mobile-panel .nav-shop-link{justify-content:space-between;text-align:left;padding-inline:12px;color:var(--blue-l);text-decoration:none}
+.mobile-panel .nav-shop-link{justify-content:space-between;text-align:left;padding-inline:12px;color:var(--blue);text-decoration:none}
 .mobile-panel .nav-shop-link svg{width:16px;height:16px}
 body.locked{overscroll-behavior:none}
 
@@ -1111,7 +1126,7 @@ body.locked{overscroll-behavior:none}
  .nav{padding-top:max(10px,env(safe-area-inset-top))}
  .nav-inner{width:calc(100% - 28px);gap:8px}
  .burger{border-radius:14px;background:rgba(12,23,39,.76);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
- .nav-cta .btn-blue{min-height:44px;padding:9px 12px;font-size:.74rem}
+ .nav-cta .btn-blue{display:none}
  #top.hero{min-height:100vh;min-height:100svh;padding:calc(94px + env(safe-area-inset-top)) 0 40px}
  #top .hero-background{height:100vh;height:100svh}
  #top .hero-grid{grid-template-columns:minmax(0,1fr);gap:25px;align-content:center}
@@ -1121,6 +1136,10 @@ body.locked{overscroll-behavior:none}
  #top .hero p{max-width:560px;margin:16px auto 0;font-size:.92rem;line-height:1.65}
  #top .hero-actions{justify-content:center;gap:9px;margin-top:20px}
  #top .hero-actions .btn{min-height:48px;padding:11px 15px;font-size:.78rem}
+ #top .hero-actions .hero-call-button{width:50px;min-width:50px;justify-content:center;padding:0}
+ #top .hero-call-button svg{display:none}
+ #top .hero-call-label{display:none}
+ #top .hero-call-emoji{display:inline;font-size:1.2rem;line-height:1}
  #top .hero-stage{width:100%;max-width:600px;margin:0 auto}
  #top .hero-stage{grid-column:1;grid-row:2;min-height:350px;height:auto}
  #top .hero-stage-glow{opacity:.65}
@@ -1174,6 +1193,7 @@ body.locked{overscroll-behavior:none}
  .nav-inner{width:calc(100% - 24px)}
  .nav-cta .btn-blue{display:none}
  .brand b{font-size:.96rem}
+ .brand small{font-size:.46rem;letter-spacing:.065em}
  #top .hero-stage{padding:18px}
  #top .hero-panel-head>span:last-child{display:none}
  #top .hero-panel-foot{align-items:flex-start;flex-direction:column;gap:10px}
@@ -1194,7 +1214,82 @@ body.locked{overscroll-behavior:none}
 @media(max-width:900px){#top .hero-stage{min-height:460px}}
 @media(max-width:760px){#top.hero .hero-copy h1{font-size:clamp(2.8rem,11.5vw,4.1rem)!important}#top .hero-stage{min-height:350px}}
 @media(max-width:380px){#top.hero .hero-copy h1{font-size:clamp(2.1rem,10.5vw,2.5rem)!important}#top .hero-stage{min-height:380px}}
-/* Mobile performance: preserve video motion while reducing expensive effects on phones. */ @media(max-width:760px){#top .hero-stage{height:auto;min-height:0!important}#top .hero-background video{filter:brightness(.76) saturate(.84);transform:translateZ(0);backface-visibility:hidden}#top .hero-background-shade{background:linear-gradient(180deg,rgba(5,10,18,.68),rgba(5,11,20,.6) 42%,rgba(5,10,18,.8)),radial-gradient(ellipse at 52% 30%,rgba(20,55,95,.12),transparent 68%);backdrop-filter:none;-webkit-backdrop-filter:none}#top .hero-stage-glow{display:none}.hero::after,.work-motion-frame::after,.work-motion-glow,.motion-live-dot,.info-strip::before{animation:none!important}.hero::after{filter:none}.work-motion-glow{filter:none;opacity:.65;background:radial-gradient(circle,rgba(53,130,220,.16),transparent 70%)}.work-motion-video{backface-visibility:hidden;transform:translateZ(0)}body{padding-bottom:calc(82px + env(safe-area-inset-bottom))}} @media(max-width:380px){#top .hero-stage{min-height:0!important}} </style>
+/* Mobile performance: keep video motion, drop expensive decorative compositing on phones. */
+@media(max-width:760px){
+ #top .hero-stage{height:auto;min-height:0!important}
+ #top .hero-background video{filter:brightness(.76) saturate(.84);transform:translateZ(0);backface-visibility:hidden}
+ #top .hero-background-shade{background:linear-gradient(180deg,rgba(5,10,18,.68),rgba(5,11,20,.6) 42%,rgba(5,10,18,.8)),radial-gradient(ellipse at 52% 30%,rgba(20,55,95,.12),transparent 68%);backdrop-filter:none;-webkit-backdrop-filter:none}
+ #top .hero-stage-glow{display:none}
+ .hero::after,.work-motion-frame::after,.work-motion-glow,.motion-live-dot,.info-strip::before{animation:none!important}
+ .hero::after{filter:none}
+ .work-motion-glow{filter:none;opacity:.65;background:radial-gradient(circle,rgba(53,130,220,.16),transparent 70%)}
+ .work-motion-video{backface-visibility:hidden;transform:translateZ(0)}
+ body{padding-bottom:calc(82px + env(safe-area-inset-bottom))}
+}
+@media(max-width:380px){#top .hero-stage{min-height:0!important}}
+
+/* Keep the hero panel content-led across desktop and mobile; avoid an empty lower half. */
+#top .hero-stage{min-height:0!important}
+#top .hero-stage{height:auto!important;aspect-ratio:auto!important}
+#top .hero-panel-foot{margin-top:0}
+.hero-business-intro p{position:relative;z-index:1;max-width:580px;margin:10px 0 0;color:rgba(208,222,240,.78);font-size:.78rem;line-height:1.6}
+.hero-business-intro>a{position:relative;z-index:1;display:inline-flex;align-items:center;gap:7px;min-height:38px;margin-top:6px;color:#b5d9ff;font-size:.74rem;font-weight:750;letter-spacing:.01em;transition:color .2s}
+.hero-business-intro>a:hover{color:#fff}
+.hero-business-intro>a b{font-size:.9rem}
+.hero-panel-foot{padding-top:11px}
+.gallery-head{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);align-items:end;gap:clamp(20px,4vw,56px)}
+.gallery-head>*{min-width:0}
+.gallery-head>.copy{width:100%;max-width:480px;justify-self:end;margin:0;text-align:left}
+@media(max-width:760px){
+ .gallery-head{grid-template-columns:minmax(0,1fr);gap:10px}
+ .gallery-head>.copy{max-width:600px;justify-self:start}
+ .hero-business-intro p{margin-top:7px;font-size:.73rem;line-height:1.55}
+ .hero-business-intro>a{min-height:40px;margin-top:2px;font-size:.7rem}
+ #top .hero-panel-foot{margin-top:0;padding-top:9px}
+ #top .hero-actions .btn-support{flex:1 0 100%;justify-content:center}
+}
+
+/* Shared on-site contact form that hands the composed message to WhatsApp. */
+.btn-support{border:1px solid rgba(109,224,189,.25);background:rgba(17,55,50,.72);color:#c5f5e4}
+.btn-support:hover{border-color:rgba(109,224,189,.5);background:rgba(20,70,62,.9);transform:translateY(-1px)}
+.contact-support-link{display:inline-flex;align-items:center;min-height:36px;padding:0;color:#91d6ff;text-align:left;font-size:inherit;font-weight:700;text-decoration:underline;text-decoration-color:rgba(145,214,255,.32);text-underline-offset:3px}
+.contact-support-link:hover{color:#c7edff}
+.support-launcher{position:fixed;z-index:96;right:max(22px,env(safe-area-inset-right));bottom:max(22px,env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 20px;border:1px solid rgba(109,224,189,.28);border-radius:999px;background:linear-gradient(135deg,#16463d,#10312f);box-shadow:0 14px 38px rgba(0,0,0,.38),0 0 24px rgba(71,202,157,.12);color:#d6fff0;font-size:.82rem;font-weight:800;letter-spacing:-.015em;transition:transform .22s var(--ease),box-shadow .22s,border-color .22s}
+.support-launcher svg{width:19px;height:19px;flex:0 0 auto}
+.support-launcher:hover{transform:translateY(-3px);border-color:rgba(109,224,189,.55);box-shadow:0 18px 44px rgba(0,0,0,.42),0 0 30px rgba(71,202,157,.2)}
+.support-launcher:focus-visible,.support-close:focus-visible,.support-form :focus-visible,.btn-support:focus-visible,.contact-support-link:focus-visible{outline:2px solid #80e4ca;outline-offset:3px}
+.support-panel{position:fixed;z-index:97;right:max(22px,env(safe-area-inset-right));bottom:max(90px,calc(env(safe-area-inset-bottom) + 82px));width:min(360px,calc(100vw - 32px));max-height:min(620px,calc(100dvh - 118px));overflow:auto;padding:18px;border:1px solid rgba(165,198,244,.22);border-radius:22px;background:linear-gradient(145deg,rgba(16,31,51,.98),rgba(7,14,25,.98));box-shadow:0 28px 88px rgba(0,0,0,.5),inset 0 1px rgba(255,255,255,.06);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);color:var(--text);animation:supportPanelIn .24s var(--ease) both}
+.support-panel[hidden]{display:none}
+@keyframes supportPanelIn{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:none}}
+.support-panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:11px;color:#a8bfd9;font-size:.64rem;font-weight:850;letter-spacing:.14em}
+.support-panel-head>div{display:flex;align-items:center;gap:8px}
+.support-status-dot{width:8px;height:8px;border-radius:50%;background:#6de0bd;box-shadow:0 0 13px rgba(109,224,189,.65)}
+.support-close{display:grid;place-items:center;width:38px;height:38px;border:1px solid rgba(190,215,246,.15);border-radius:12px;background:rgba(255,255,255,.035);color:#e9f2ff;font-size:1.35rem;line-height:1}
+.support-panel h2{font-size:1.28rem;line-height:1.2;letter-spacing:-.045em}
+.support-panel>p{margin:7px 0 13px;color:#aab9ce;font-size:.78rem;line-height:1.55}
+.support-form{display:grid;gap:6px}
+.support-form label{margin-top:3px;color:#dce8f8;font-size:.73rem;font-weight:750}
+.support-form label span{color:#8495ae;font-size:.68rem;font-weight:500}
+.support-form input,.support-form textarea{width:100%;min-height:42px;padding:9px 12px;border:1px solid rgba(180,208,244,.17);border-radius:11px;outline:0;background:rgba(11,21,36,.88);color:#f4f7fd;font:500 .83rem 'Manrope',sans-serif;resize:vertical;transition:border-color .2s,box-shadow .2s}
+.support-form textarea{min-height:76px;line-height:1.5}
+.support-form input::placeholder,.support-form textarea::placeholder{color:#8294ad}
+.support-form input:focus,.support-form textarea:focus{border-color:rgba(118,228,255,.65);box-shadow:0 0 0 3px rgba(94,188,255,.1)}
+.support-submit{min-height:46px;justify-content:center;margin-top:5px}
+.support-form>small{margin-top:2px;color:#8d9eb5;font-size:.67rem;line-height:1.55}
+.support-open .mobile-action-bar{display:none!important}
+@media(max-width:760px){
+ .support-launcher{display:none}
+ .mobile-action-bar a,.mobile-action-bar button{min-width:0;min-height:50px;flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:0 12px;border:1px solid rgba(196,216,248,.14);border-radius:999px;color:#eef6ff;font-size:.75rem;font-weight:800;white-space:nowrap;cursor:pointer}
+ .mobile-action-bar button.action-whatsapp{background:rgba(18,59,54,.94);border-color:rgba(83,218,168,.24);color:#c0f6e1}
+ .support-panel{right:max(16px,env(safe-area-inset-right));bottom:calc(82px + env(safe-area-inset-bottom));width:min(360px,calc(100vw - 32px));max-height:calc(100dvh - 116px - env(safe-area-inset-bottom));padding:17px;border-radius:20px}
+ .support-open .support-panel{bottom:calc(14px + env(safe-area-inset-bottom))}
+}
+@media(max-width:380px){
+ .mobile-action-bar a,.mobile-action-bar button{min-height:48px;padding-inline:9px;font-size:.7rem}
+ .support-panel{right:max(14px,env(safe-area-inset-right));width:calc(100vw - 28px);padding:15px}
+}
+@media(prefers-reduced-motion:reduce){.support-panel,.support-launcher{animation:none!important;transition:none!important}}
+</style>
 </head>
 <body>
 
@@ -1203,13 +1298,13 @@ body.locked{overscroll-behavior:none}
 <header class="nav" id="nav">
   <div class="nav-inner">
     <div class="brand" id="brandHome" style="cursor:pointer">
-      <div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#2f6fed" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg></div>
-      <div><b>BUL<span>VAR</span> GSM</b><small>TEKNİK SERVİS</small></div>
+      <div><b>BUL<span>VAR</span> GSM</b><small>PREMIUM TEKNİK SERVİS</small></div>
     </div>
     <nav class="nav-links">
       <button data-goto="#hakkimizda">Hakkımızda</button>
-      <button data-goto="#hizmetler">Hizmetler</button>
       <button data-goto="#videolar">Videolar</button>
+      <button data-goto="#hizmetler">Hizmetler</button>
+      <button data-goto="#servis-durumu">Servis durumu</button>
       <button data-goto="#yorumlar">Yorumlar</button>
       <button data-goto="#iletisim">İletişim</button>
       <a class="nav-shop-link" href="https://www.shopify.com/tr" target="_blank" rel="noopener noreferrer" aria-label="Shopify Türkiye sitesini yeni sekmede aç">Mağaza <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3 11 13"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg></a>
@@ -1226,12 +1321,13 @@ body.locked{overscroll-behavior:none}
 <div class="mobile-panel" id="mobilePanel" role="dialog" aria-modal="true" aria-label="Mobil menü" tabindex="-1">
   <div class="mobile-panel-head"><span>BULVAR GSM <i>·</i> MENÜ</span><button class="mobile-panel-close" id="mobilePanelClose" type="button" aria-label="Menüyü kapat">×</button></div>
   <button data-goto="#hakkimizda">Hakkımızda</button>
-  <button data-goto="#hizmetler">Hizmetler</button>
   <button data-goto="#videolar">Videolar</button>
+  <button data-goto="#hizmetler">Hizmetler</button>
+  <button data-goto="#servis-durumu">Servis durumu</button>
   <button data-goto="#yorumlar">Yorumlar</button>
   <button data-goto="#iletisim">İletişim</button>
   <a class="nav-shop-link" id="mobileShopLink" href="https://www.shopify.com/tr" target="_blank" rel="noopener noreferrer" aria-label="Shopify Türkiye sitesini yeni sekmede aç">Mağaza <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3 11 13"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg></a>
-  <a class="btn btn-blue" style="margin-top:24px;justify-content:center" href="tel:+905063857754">0506 385 77 54</a>
+  <a class="btn btn-blue" style="margin-top:24px;justify-content:center" href="tel:+905063857754">📞 Hemen Ara</a>
   <a class="btn btn-ghost" style="margin-top:10px;justify-content:center" href="https://wa.me/905063857754?text=Merhaba%2C%20telefon%20tamiri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp’tan yazın</a>
 </div>
 
@@ -1249,17 +1345,22 @@ body.locked{overscroll-behavior:none}
       <h1 class="disp"><span class="hero-title-line">Telefonunuz</span><span class="hero-title-line hero-title-line-alt">emin ellerde<span class="accent">.</span></span></h1>
       <p>Bulvar GSM, ekran ve batarya değişiminden yazılım ve veri kurtarmaya kadar tüm cep telefonu arızalarına aynı gün çözüm üreten bir teknik servis atölyesidir. "Orası Burası."</p>
       <div class="hero-actions">
-        <a class="btn btn-blue" href="tel:+905063857754">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.8 2.2Z"/></svg>
-          0506 385 77 54
+        <a class="btn btn-blue hero-call-button" href="tel:+905063857754" aria-label="Bulvar GSM’yi ara: 0506 385 77 54">
+          <span class="hero-call-emoji" aria-hidden="true">📞</span><span class="hero-call-label">Ara</span>
         </a>
         <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=40.7744313%2C30.4024168&destination_place_id=ChIJ0yhsiHazzBQRr6aM_oaczqU" target="_blank" rel="noopener">Yol Tarifi Al</a>
+        <button class="btn btn-support" type="button" data-support-open aria-controls="supportPanel" aria-expanded="false">WhatsApp’tan fiyat sor <span aria-hidden="true">↗</span></button>
       </div>
     </div>
     <div class="hero-stage reveal" aria-label="Bulvar GSM teknik servis hizmetleri">
       <div class="hero-stage-glow" aria-hidden="true"></div>
       <div class="hero-panel-head"><span><i></i> BULVAR GSM <b>/</b> SERVİS ATÖLYESİ</span><span>ADAPAZARI · SAKARYA</span></div>
-      <div class="hero-panel-intro"><span>UZMANLIK ALANLARIMIZ</span><h2>Her cihaz için<br><strong>doğru çözüm.</strong></h2></div>
+      <div class="hero-panel-intro hero-business-intro">
+        <span>KURUMSAL SERVİS DESTEĞİ</span>
+        <h2>Kurumunuzun cihaz<br><strong>servis yükünü alalım.</strong></h2>
+        <p>10’dan fazla çalışanı olan kurumlara telefon ve tablet tamir desteği sunuyoruz. Anlaşma koşullarına göre ücretsiz kurye ile cihazları gün içinde teslim edip iş akışınızın sürmesine yardımcı oluyoruz.</p>
+        <a href="https://wa.me/905063857754?text=Merhaba%2C%20kurumumuz%20i%C3%A7in%20telefon%20ve%20tablet%20servis%20deste%C4%9Fi%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum." target="_blank" rel="noopener noreferrer">Kurumsal destek hakkında görüşün <b aria-hidden="true">↗</b></a>
+      </div>
       <div class="hero-service-list">
         <a class="hero-service-row" href="#hizmetler"><span class="hero-service-index">01</span><span><b>Ekran ve ön cam</b><small>Görüntü ve dokunmatik onarımı</small></span><span class="hero-service-arrow" aria-hidden="true">↗</span></a>
         <a class="hero-service-row" href="#hizmetler"><span class="hero-service-index">02</span><span><b>Batarya ve güç</b><small>Pil, şarj ve bağlantı sorunları</small></span><span class="hero-service-arrow" aria-hidden="true">↗</span></a>
@@ -1279,7 +1380,7 @@ body.locked{overscroll-behavior:none}
   <div class="wrap info-strip-inner">
     <div class="info-chip">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z"/></svg>
-      <div><b>Konum</b><span>Abasıyanık İş Hanı</span></div>
+      <div><b>Konum</b><span>Atatürk Bulvarı · Bulvar GSM</span></div>
     </div>
     <div class="info-divider"></div>
     <div class="info-chip">
@@ -1294,11 +1395,11 @@ body.locked{overscroll-behavior:none}
     <div class="info-divider"></div>
     <div class="info-chip">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M4 9h16"/></svg>
-      <div><b>Randevu</b><span>Gerekmez</span></div>
+      <div><b>Randevu</b><span>7/24</span></div>
     </div>
     <div class="info-divider"></div>
     <div class="brand-strip">
-      <span>Apple</span><span>Samsung</span><span>Huawei</span><span>General Mobile</span><span>Android</span>
+      <span>Apple</span><span>Samsung</span><span>Huawei</span><span>Xiaomi</span><span>Android</span>
     </div>
   </div>
 </section>
@@ -1310,15 +1411,80 @@ body.locked{overscroll-behavior:none}
   </div>
 </div>
 
+<section class="section" id="videolar">
+  <div class="wrap">
+    <div class="gallery-head reveal">
+      <div>
+        <div class="kicker">İŞLERİMİZDEN</div>
+        <h2 class="title">Elimizden çıkan işler</h2>
+      </div>
+      <p class="copy" style="margin-top:0">Instagram hesabımızdaki en yeni onarım Reels’lerini ve atölyeden seçili işleri keşfedin.</p>
+    </div>
+    <div class="video-carousel">
+      <button class="carousel-arrow prev" id="carouselPrev" type="button" aria-label="Önceki tamir videosu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="video-track" id="videoTrack">
+      <div class="video-card reveal" data-video="assets/repairs/15-pro-max-ekran-degisimi.mp4">
+        <div class="poster"><img src="assets/repairs/15-pro-max-ekran-degisimi.webp" alt="15 Pro Max ekran değişimi videosundan kapak görüntüsü" loading="lazy" decoding="async"></div>
+        <div class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span></div>
+        <div class="label">15 Pro Max Ekran Değişim</div>
+      </div>
+      <div class="video-card reveal" data-video="assets/repairs/lazer-tamir.mp4">
+        <div class="poster"><img src="assets/repairs/lazer-tamir.webp" alt="Lazer tamir videosundan kapak görüntüsü" loading="lazy" decoding="async"></div>
+        <div class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span></div>
+        <div class="label">Lazer Tamir</div>
+      </div>
+      <div class="video-card reveal" data-video="assets/repairs/ipad-batarya-degisimi.mp4">
+        <div class="poster"><img src="assets/repairs/ipad-batarya-degisimi.webp" alt="iPad batarya değişimi videosundan kapak görüntüsü" loading="lazy" decoding="async"></div>
+        <div class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span></div>
+        <div class="label">IPAD Batarya Değişim</div>
+      </div>
+      <div class="video-card reveal" data-video="assets/repairs/17-pro-max-ekran-degisimi.mp4">
+        <div class="poster"><img src="assets/repairs/17-pro-max-ekran-degisimi.webp" alt="17 Pro Max ekran değişimi videosundan kapak görüntüsü" loading="lazy" decoding="async"></div>
+        <div class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span></div>
+        <div class="label">17 Pro Max Ekran Değişim</div>
+      </div>
+      <div class="video-card reveal" data-video="assets/repairs/15-pro-arka-cam.mp4">
+        <div class="poster"><img src="assets/repairs/15-pro-arka-cam.webp" alt="15 Pro Max arka cam değişimi videosundan kapak görüntüsü" loading="lazy" decoding="async"></div>
+        <div class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span></div>
+        <div class="label">15 Pro Max Arka Cam Değişim</div>
+      </div>
+      </div>
+      <button class="carousel-arrow next" id="carouselNext" type="button" aria-label="Sonraki tamir videosu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+  </div>
+</section>
+
 <section class="proof-section" aria-label="Bulvar GSM servis göstergeleri">
   <div class="wrap">
     <div class="proof-heading reveal"><span class="kicker">GÜVENİN GÖSTERGELERİ</span><p>Her cihazda aynı özen, her müşteride aynı açıklık.</p></div>
     <div class="proof-grid">
       <article class="proof-card reveal"><span class="proof-index">01 <i></i> TAMAMLANAN İŞLEMLER</span><strong><span class="count-up" data-count="20000">0</span><small>+</small></strong><span class="proof-note">Teknik işlem</span></article>
       <article class="proof-card proof-card-word reveal"><span class="proof-index">02 <i></i> GARANTİ</span><strong>Parça bazlı</strong><span class="proof-note">Süre, işlem ve parçaya göre değişir</span></article>
-      <article class="proof-card proof-card-note reveal"><span class="proof-index">03 <i></i> MARKA DESTEĞİ</span><strong>4<small>+</small></strong><span class="proof-note">Apple, Samsung, Huawei, General Mobile ve Android</span></article>
+      <article class="proof-card proof-card-note reveal"><span class="proof-index">03 <i></i> MARKA DESTEĞİ</span><strong>4<small>+</small></strong><span class="proof-note">Apple, Samsung, Huawei, Xiaomi ve Android</span></article>
     </div>
     <p class="proof-footnote">Garanti kapsamı ve süresi, seçilen parça ve işlem türüne göre teslim sırasında netleştirilir.</p>
+  </div>
+</section>
+
+<section class="section cta-section" aria-label="Bulvar GSM ile iletişim">
+  <div class="wrap">
+    <div class="cta-panel reveal">
+      <div class="cta-orbit cta-orbit-one" aria-hidden="true"></div>
+      <div class="cta-orbit cta-orbit-two" aria-hidden="true"></div>
+      <div class="cta-copy">
+        <span class="promo-tag">CİHAZINIZ İÇİN HIZLI DESTEK</span>
+        <h2 class="disp">Arızayı birlikte<br/>çözelim.</h2>
+        <p>Modeli ve yaşadığınız sorunu bize iletin. Servis ve tahmini işlem süresi hakkında bilgi alın.</p>
+        <div class="cta-actions">
+          <a class="btn btn-blue" href="tel:+905063857754">Şimdi ara · 0506 385 77 54</a>
+          <a class="btn btn-ghost" href="https://wa.me/905063857754?text=Merhaba%2C%20telefon%20tamiri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp’tan yazın</a>
+        </div>
+      </div>
+      <div class="cta-visual" aria-hidden="true">
+        <div class="cta-phone"><span></span><i></i><b></b><div class="cta-phone-glow"></div></div>
+        <div class="cta-orbit-dot"></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1329,8 +1495,8 @@ body.locked{overscroll-behavior:none}
       <h2 class="title">Sakarya'nın güvendiği<br/>teknik servisi</h2>
       <p class="copy">Yıllardır Adapazarı'nda hizmet veren Bulvar GSM, şeffaf fiyatlandırma ve özenli teknik servis anlayışıyla çalışır. Arıza tespiti ve ücret bilgisi işlem öncesinde paylaşılır; onayınızın ardından cihazınız atölyede onarılır ve teslimden önce test edilir.</p>
       <div class="hours" style="margin-top:28px">
-        <div class="row"><span>Pazartesi – Cumartesi</span><span>12:30 — 20:00</span></div>
-        <div class="row"><span>Pazar</span><span>Kapalı</span></div>
+        <div class="row"><span>Pazartesi – Cumartesi</span><span>09:00 — 20:00</span></div>
+        <div class="row"><span>Pazar</span><span>12:30 — 20:00</span></div>
       </div>
     </div>
     <div class="feature-list reveal">
@@ -1392,7 +1558,7 @@ body.locked{overscroll-behavior:none}
     <div class="reveal">
       <div class="kicker">HİZMETLERİMİZ</div>
       <h2 class="title">Tek bir çatı altında<br/>tüm telefon çözümleri</h2>
-      <p class="copy">Apple, Samsung, Huawei, General Mobile ve Android tabanlı tüm cihazlarda uzman teknik destek.</p>
+      <p class="copy">Apple, Samsung, Huawei, Xiaomi ve Android tabanlı tüm cihazlarda uzman teknik destek.</p>
     </div>
     <div class="svc-grid">
       <div class="svc-card reveal">
@@ -1427,6 +1593,10 @@ body.locked{overscroll-behavior:none}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4.5 13h6L10 22l9.5-12h-6L13 2Z"/></svg>
         <h4>Şarj soketi ve bağlantı</h4><p>Şarj almama, temassızlık ve bağlantı sorunları için kontrol ve onarım.</p>
       </div>
+      <div class="svc-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5m-4 0h8"/></svg>
+        <h4>Hoparlör &amp; mikrofon</h4><p>Ses kısılması, cızırtı veya karşı tarafa ses gitmemesi sorunlarında kontrol ve onarım.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1459,55 +1629,14 @@ body.locked{overscroll-behavior:none}
     </div>
     <div class="work-motion-frame reveal">
       <div class="work-motion-label"><span class="motion-live-dot"></span>CIHAZ TEKNOLOJİSİ <span>360°</span></div>
-      <video class="work-motion-video" data-ambient-video data-src="assets/bulvar-work-motion.mp4" muted loop playsinline preload="none" aria-label="Dönen akıllı telefon ürün animasyonu"></video>
+      <video class="work-motion-video" data-ambient-video data-src="assets/bulvar-work-motion.mp4" poster="assets/bulvar-phone-transparent.webp" muted loop playsinline preload="none" aria-label="Dönen akıllı telefon ürün animasyonu"></video>
       <div class="work-motion-glow" aria-hidden="true"></div>
       <div class="work-motion-caption">HASSASİYET · DENEYİM · GÜVEN</div>
     </div>
   </div>
 </section>
 
-<section class="section" id="videolar">
-  <div class="wrap">
-    <div class="gallery-head reveal">
-      <div>
-        <div class="kicker">İŞLERİMİZDEN</div>
-        <h2 class="title">Elimizden çıkan işler</h2>
-      </div>
-      <p class="copy" style="margin-top:0">Atölyemizde tamamlanan tamiratlardan kısa görüntüler. İncelemek için bir kart üzerine tıklayın.</p>
-    </div>
-    <div class="video-carousel">
-      <button class="carousel-arrow prev" id="carouselPrev" type="button" aria-label="Önceki tamir videosu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
-      <div class="video-track" id="videoTrack">
-      <div class="video-card reveal" data-video="assets/repairs/15-pro-max-ekran-degisimi.mp4">
-        <div class="poster"><img src="assets/repairs/15-pro-max-ekran-degisimi.webp" alt="15 Pro Max ekran değişimi videosundan kapak görüntüsü" loading="lazy" decoding="async"></div>
-        <div class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span></div>
-        <div class="label">15 Pro Max Ekran Değişim</div>
-      </div>
-      <div class="video-card reveal" data-video="assets/repairs/lazer-tamir.mp4">
-        <div class="poster"><img src="assets/repairs/lazer-tamir.webp" alt="Lazer tamir videosundan kapak görüntüsü" loading="lazy" decoding="async"></div>
-        <div class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span></div>
-        <div class="label">Lazer Tamir</div>
-      </div>
-      <div class="video-card reveal" data-video="assets/repairs/ipad-batarya-degisimi.mp4">
-        <div class="poster"><img src="assets/repairs/ipad-batarya-degisimi.webp" alt="iPad batarya değişimi videosundan kapak görüntüsü" loading="lazy" decoding="async"></div>
-        <div class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span></div>
-        <div class="label">IPAD Batarya Değişim</div>
-      </div>
-      <div class="video-card reveal" data-video="assets/repairs/17-pro-max-ekran-degisimi.mp4">
-        <div class="poster"><img src="assets/repairs/17-pro-max-ekran-degisimi.webp" alt="17 Pro Max ekran değişimi videosundan kapak görüntüsü" loading="lazy" decoding="async"></div>
-        <div class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span></div>
-        <div class="label">17 Pro Max Ekran Değişim</div>
-      </div>
-      <div class="video-card reveal" data-video="assets/repairs/15-pro-arka-cam.mp4">
-        <div class="poster"><img src="assets/repairs/15-pro-arka-cam.webp" alt="15 Pro Max arka cam değişimi videosundan kapak görüntüsü" loading="lazy" decoding="async"></div>
-        <div class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span></div>
-        <div class="label">15 Pro Max Arka Cam Değişim</div>
-      </div>
-      </div>
-      <button class="carousel-arrow next" id="carouselNext" type="button" aria-label="Sonraki tamir videosu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
-    </div>
-  </div>
-</section>
+
 
 <section class="section reviews" id="yorumlar">
   <div class="wrap">
@@ -1596,27 +1725,7 @@ body.locked{overscroll-behavior:none}
   </div>
 </section>
 
-<section class="section cta-section" aria-label="Bulvar GSM ile iletişim">
-  <div class="wrap">
-    <div class="cta-panel reveal">
-      <div class="cta-orbit cta-orbit-one" aria-hidden="true"></div>
-      <div class="cta-orbit cta-orbit-two" aria-hidden="true"></div>
-      <div class="cta-copy">
-        <span class="promo-tag">CİHAZINIZ İÇİN HIZLI DESTEK</span>
-        <h2 class="disp">Arızayı birlikte<br/>çözelim.</h2>
-        <p>Modeli ve yaşadığınız sorunu bize iletin. Servis ve tahmini işlem süresi hakkında bilgi alın.</p>
-        <div class="cta-actions">
-          <a class="btn btn-blue" href="tel:+905063857754">Şimdi ara · 0506 385 77 54</a>
-          <a class="btn btn-ghost" href="https://wa.me/905063857754?text=Merhaba%2C%20telefon%20tamiri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp’tan yazın</a>
-        </div>
-      </div>
-      <div class="cta-visual" aria-hidden="true">
-        <div class="cta-phone"><span></span><i></i><b></b><div class="cta-phone-glow"></div></div>
-        <div class="cta-orbit-dot"></div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <section class="section" id="iletisim">
   <div class="wrap">
@@ -1630,7 +1739,7 @@ body.locked{overscroll-behavior:none}
         <div class="contact-address-block">
         <div class="info-row contact-address">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z"/></svg>
-          <div><b>Adres</b><span>Semerciler, Atatürk Blv. No:32/B, 54100 Adapazarı / Sakarya — Abasıyanık İş Hanı</span></div>
+          <div><b>Adres</b><span>Semerciler, Atatürk Blv. No:32/B, 54100 Adapazarı / Sakarya — Bulvar GSM</span></div>
         </div>
         <a class="contact-address-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.7744313%2C30.4024168&amp;destination_place_id=ChIJ0yhsiHazzBQRr6aM_oaczqU" target="_blank" rel="noopener">Yol tarifi al <span aria-hidden="true">↗</span></a>
         </div>
@@ -1641,7 +1750,7 @@ body.locked{overscroll-behavior:none}
         </div>
         <div class="info-row contact-method">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 8.7 4a8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.4Z"/></svg>
-          <div><b>WhatsApp</b><span><a href="https://wa.me/905063857754?text=Merhaba%2C%20telefon%20tamiri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Mesaj gönder</a></span></div>
+          <div><b>WhatsApp destek</b><span><button class="contact-support-link" type="button" data-support-open aria-controls="supportPanel" aria-expanded="false">Siteden mesaj yazın</button></span></div>
         </div>
         <div class="info-row contact-method">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
@@ -1649,13 +1758,13 @@ body.locked{overscroll-behavior:none}
         </div>
         <div class="info-row contact-method">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-          <div><b>Çalışma saatleri</b><span>Pazartesi – Cumartesi, 12:30 — 20:00</span></div>
+          <div><b>Çalışma saatleri</b><span>Pzt–Cmt · 09:00–20:00<br/>Pazar · 12:30–20:00</span></div>
         </div>
         </div>
         <a class="btn btn-blue contact-call-button" href="tel:+905063857754">Şimdi ara <span>0506 385 77 54</span><b aria-hidden="true">↗</b></a>
       </div>
       <div class="map-frame reveal">
-        <div class="map-frame-label"><span class="map-pin-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><b>Bulvar GSM</b><small>Abasıyanık İş Hanı · Adapazarı</small></span></div>
+        <div class="map-frame-label"><span class="map-pin-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><b>Bulvar GSM</b><small>Atatürk Bulvarı · Adapazarı</small></span></div>
         <iframe src="https://www.google.com/maps?q=40.7744313%2C30.4024168&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bulvar GSM konum haritası"></iframe>
       </div>
     </div>
@@ -1668,11 +1777,34 @@ body.locked{overscroll-behavior:none}
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.8 2.2Z"/></svg>
     <span>Hemen Ara</span>
   </a>
-  <a class="action-whatsapp" href="https://wa.me/905063857754?text=Merhaba%2C%20telefon%20tamiri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" aria-label="WhatsApp’tan mesaj gönder">
+  <button class="action-whatsapp" type="button" data-support-open aria-controls="supportPanel" aria-expanded="false" aria-label="WhatsApp destek ve fiyat alma penceresini aç">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 8.7 4a8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.4Z"/></svg>
-    <span>WhatsApp</span>
-  </a>
+    <span>Destek / Fiyat al</span>
+  </button>
 </nav>
+
+<button class="support-launcher" id="supportLauncher" type="button" data-support-open aria-controls="supportPanel" aria-expanded="false" aria-label="WhatsApp destek ve fiyat alma penceresini aç">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 8.7 4a8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.4Z"/></svg>
+  <span>Destek / Fiyat al</span>
+</button>
+<aside class="support-panel" id="supportPanel" role="dialog" aria-modal="false" aria-labelledby="supportTitle" aria-describedby="supportDescription" hidden>
+  <div class="support-panel-head">
+    <div><span class="support-status-dot" aria-hidden="true"></span><span>WHATSAPP DESTEK</span></div>
+    <button class="support-close" id="supportClose" type="button" aria-label="Destek penceresini kapat">×</button>
+  </div>
+  <h2 id="supportTitle" tabindex="-1">Nasıl yardımcı olalım?</h2>
+  <p id="supportDescription">Cihazınızı ve ihtiyacınızı yazın; mesajınız Bulvar GSM WhatsApp hattında hazır açılsın.</p>
+  <form class="support-form" id="supportForm">
+    <label for="supportName">Adınız <span>(isteğe bağlı)</span></label>
+    <input id="supportName" name="name" type="text" autocomplete="name" maxlength="80" placeholder="Adınız"/>
+    <label for="supportDevice">Cihaz modeli <span>(isteğe bağlı)</span></label>
+    <input id="supportDevice" name="device" type="text" autocomplete="off" maxlength="100" placeholder="Örn. iPhone 15 Pro"/>
+    <label for="supportMessage">Mesajınız</label>
+    <textarea id="supportMessage" name="message" rows="3" maxlength="1000" required placeholder="Arıza veya fiyatını öğrenmek istediğiniz işlemi yazın"></textarea>
+    <button class="btn btn-blue support-submit" type="submit">WhatsApp’ta devam et <span aria-hidden="true">↗</span></button>
+    <small>Mesaj gönderilmeden önce WhatsApp açılır; son gönderimi siz onaylarsınız.</small>
+  </form>
+</aside>
 
 <footer class="site-footer">
   <div class="wrap">
@@ -1688,14 +1820,13 @@ body.locked{overscroll-behavior:none}
       </div>
       <a class="footer-band-location" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.7744313%2C30.4024168&amp;destination_place_id=ChIJ0yhsiHazzBQRr6aM_oaczqU" target="_blank" rel="noopener" aria-label="Bulvar GSM için Google Haritalar’da yol tarifi al">
         <span class="footer-location-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
-        <span class="footer-location-copy"><small>SERVİS NOKTASI · YOL TARİFİ</small><b>Semerciler · Adapazarı</b><span>Abasıyanık İş Hanı</span><i id="openState">Durum kontrol ediliyor</i></span>
+        <span class="footer-location-copy"><small>SERVİS NOKTASI · YOL TARİFİ</small><b>Atatürk Bulvarı · Bulvar GSM</b><span>Semerciler · Adapazarı</span><i id="openState">Durum kontrol ediliyor</i></span>
       </a>
     </div>
     <div class="footer-grid">
       <div class="footer-brand-column">
         <a class="brand" href="#top" data-goto="#top" aria-label="Bulvar GSM ana sayfa">
-          <div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#2f6fed" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg></div>
-          <div><b class="disp">BUL<span>VAR</span> GSM</b><small>TEKNİK SERVİS</small></div>
+          <div><b class="disp">BUL<span>VAR</span> GSM</b><small>PREMIUM TEKNİK SERVİS</small></div>
         </a>
         <p>Adapazarı’nda telefon onarımı, aksesuar ve teknik destek. Orası Burası.</p>
         <div class="footer-socials">
@@ -1722,9 +1853,9 @@ body.locked{overscroll-behavior:none}
       </div>
       <div class="footer-contact-column">
         <h5>ATÖLYE</h5>
-        <p>Semerciler, Atatürk Blv. No:32/B<br/>Abasıyanık İş Hanı<br/>Adapazarı / Sakarya</p>
+        <p>Semerciler, Atatürk Blv. No:32/B<br/>Bulvar GSM<br/>Adapazarı / Sakarya</p>
         <a href="tel:+905063857754">0506 385 77 54</a>
-        <span>Pzt — Cmt · 12:30 — 20:00</span>
+        <span>Pzt — Cmt · 09:00 — 20:00<br/>Pazar · 12:30 — 20:00</span>
       </div>
     </div>
     <div class="footer-bottom">
@@ -1737,10 +1868,13 @@ body.locked{overscroll-behavior:none}
 <div class="modal-backdrop" id="modalBackdrop">
   <div class="modal-box">
     <button class="modal-close" id="modalClose">✕</button>
+    <a class="instagram-modal-link" id="instagramOpenLink" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram’da aç <span aria-hidden="true">↗</span></a>
     <video id="modalVideo" controls playsinline preload="none" aria-label="Tamir videosu"></video>
+    <iframe id="instagramModalFrame" title="Instagram Reels videosu" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
   </div>
 </div>
 
+<script src="assets/instagram-reels.js"></script>
 <script>
 (function(){
   var nav = document.getElementById('nav');
@@ -1756,14 +1890,15 @@ body.locked{overscroll-behavior:none}
     var values = {};
     parts.forEach(function(part){ values[part.type] = part.value; });
     var minuteOfDay = Number(values.hour) * 60 + Number(values.minute);
-    var isOpen = values.weekday !== 'Sun' && minuteOfDay >= 750 && minuteOfDay < 1200;
+    var openingMinute = values.weekday === 'Sun' ? 750 : 540;
+    var isOpen = minuteOfDay >= openingMinute && minuteOfDay < 1200;
     var label = isOpen ? 'Şu an açık' : 'Şu an kapalı';
     if(storeStatus){
       storeStatus.dataset.open = isOpen ? 'true' : 'false';
       storeStatus.textContent = label;
     }
     if(footerOpenState){
-      footerOpenState.textContent = label + ' · Pzt–Cmt 12:30–20:00';
+      footerOpenState.textContent = label + ' · Pzt–Cmt 09:00–20:00 · Paz 12:30–20:00';
       footerOpenState.style.color = isOpen ? '#6de0bd' : '#ff9aa8';
     }
   }
@@ -1884,6 +2019,46 @@ body.locked{overscroll-behavior:none}
     });
   }
 
+  var supportPanel = document.getElementById('supportPanel');
+  var supportForm = document.getElementById('supportForm');
+  var supportClose = document.getElementById('supportClose');
+  var supportOpeners = Array.prototype.slice.call(document.querySelectorAll('[data-support-open]'));
+  var lastSupportOpener = null;
+  function setSupportOpen(isOpen, restoreFocus){
+    supportPanel.hidden = !isOpen;
+    document.body.classList.toggle('support-open', isOpen);
+    supportOpeners.forEach(function(opener){ opener.setAttribute('aria-expanded', isOpen ? 'true' : 'false'); });
+    if(isOpen){
+      lastSupportOpener = document.activeElement;
+      document.getElementById('supportTitle').focus();
+    }else if(restoreFocus && lastSupportOpener && typeof lastSupportOpener.focus === 'function'){
+      lastSupportOpener.focus();
+    }
+  }
+  supportOpeners.forEach(function(opener){
+    opener.addEventListener('click', function(){ setSupportOpen(supportPanel.hidden, !supportPanel.hidden); });
+  });
+  supportClose.addEventListener('click', function(){ setSupportOpen(false, true); });
+  document.addEventListener('pointerdown', function(event){
+    if(!supportPanel.hidden && !supportPanel.contains(event.target) && !event.target.closest('[data-support-open]')) setSupportOpen(false, false);
+  });
+  document.addEventListener('keydown', function(event){
+    if(event.key === 'Escape' && !supportPanel.hidden){ event.preventDefault(); setSupportOpen(false, true); }
+  });
+  supportForm.addEventListener('submit', function(event){
+    event.preventDefault();
+    if(!supportForm.reportValidity()) return;
+    var name = document.getElementById('supportName').value.trim();
+    var device = document.getElementById('supportDevice').value.trim();
+    var details = document.getElementById('supportMessage').value.trim();
+    var messageLines = ['Merhaba, Bulvar GSM’den fiyat ve destek almak istiyorum.'];
+    if(name) messageLines.push('Adım: ' + name);
+    if(device) messageLines.push('Cihaz: ' + device);
+    messageLines.push('Mesajım: ' + details);
+    var whatsappUrl = 'https://wa.me/905063857754?text=' + encodeURIComponent(messageLines.join('\n'));
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  });
+
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
       if(entry.isIntersecting){
@@ -1934,6 +2109,10 @@ body.locked{overscroll-behavior:none}
         var video = entry.target;
         if(entry.isIntersecting){
           if(!video.getAttribute('src')){
+            video.addEventListener('canplay', function(){
+              var rect = video.getBoundingClientRect();
+              if(!document.hidden && rect.bottom > 0 && rect.top < window.innerHeight) video.play().catch(function(){});
+            }, { once:true });
             video.setAttribute('src', video.getAttribute('data-src'));
             video.load();
           }
@@ -1942,25 +2121,123 @@ body.locked{overscroll-behavior:none}
           video.pause();
         }
       });
-    }, { threshold:.2, rootMargin:'100px 0px' });
+    }, { threshold:.12, rootMargin:'180px 0px' });
     ambientVideos.forEach(function(video){ ambientObserver.observe(video); });
+    document.addEventListener('visibilitychange', function(){
+      ambientVideos.forEach(function(video){
+        if(document.hidden){ video.pause(); return; }
+        var rect = video.getBoundingClientRect();
+        if(video.getAttribute('src') && rect.bottom > 0 && rect.top < window.innerHeight) video.play().catch(function(){});
+      });
+    });
+  } else if(!reduceMotion){
+    ambientVideos.forEach(function(video){
+      video.setAttribute('src',video.getAttribute('data-src'));
+      video.load();
+      video.play().catch(function(){});
+    });
   }
 
   var backdrop = document.getElementById('modalBackdrop');
+  var modalBox = backdrop.querySelector('.modal-box');
   var modalVideo = document.getElementById('modalVideo');
+  var instagramModalFrame = document.getElementById('instagramModalFrame');
+  var instagramOpenLink = document.getElementById('instagramOpenLink');
+  var track = document.getElementById('videoTrack');
+  var instagramReels = Array.isArray(window.BULVAR_INSTAGRAM_REELS) ? window.BULVAR_INSTAGRAM_REELS : [];
+
+  function safeInstagramPermalink(value){
+    try{
+      var url = new URL(value);
+      if(url.hostname !== 'www.instagram.com' && url.hostname !== 'instagram.com') return '';
+      if(!/^\/(?:reel|p)\/[A-Za-z0-9_-]+\/?$/.test(url.pathname)) return '';
+      return 'https://www.instagram.com' + url.pathname.replace(/\/?$/, '/');
+    }catch(error){ return ''; }
+  }
+
+  function safeInstagramThumbnail(value){
+    if(typeof value === 'string' && /^assets\/(?:instagram|repairs)\/[A-Za-z0-9._-]+\.(?:webp|jpe?g|png)$/i.test(value)) return value;
+    try{
+      var url = new URL(value);
+      var host = url.hostname.toLowerCase();
+      if(url.protocol !== 'https:' || !(host.endsWith('.cdninstagram.com') || host.endsWith('.fbcdn.net') || host.endsWith('.fbsbx.com'))) return '';
+      return url.href;
+    }catch(error){ return ''; }
+  }
+
+  if(instagramReels.length){
+    var instagramCards = document.createDocumentFragment();
+    instagramReels.slice(0,6).forEach(function(reel){
+      var permalink = safeInstagramPermalink(reel.permalink);
+      var thumbnailUrl = safeInstagramThumbnail(reel.thumbnailUrl);
+      if(!permalink || !reel.title) return;
+      var card = document.createElement('div');
+      card.className = 'video-card reveal instagram-reel-card';
+      card.setAttribute('data-instagram-url', permalink);
+      card.setAttribute('role', 'button');
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('aria-label', reel.title + ' Instagram Reels videosunu aç');
+      var poster = document.createElement('div');
+      poster.className = 'poster';
+      if(thumbnailUrl){
+        var image = document.createElement('img');
+        image.src = thumbnailUrl;
+        image.alt = reel.title + ' Instagram Reels kapak görseli';
+        image.loading = 'lazy';
+        image.decoding = 'async';
+        poster.appendChild(image);
+      }else{
+        poster.classList.add('instagram-cover-pending');
+        var placeholder = document.createElement('span');
+        placeholder.className = 'reel-cover-placeholder';
+        placeholder.setAttribute('aria-hidden', 'true');
+        placeholder.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M10 18h4"/></svg><span>KAPAK GÖRSELİ</span>';
+        poster.appendChild(placeholder);
+      }
+      var play = document.createElement('div');
+      play.className = 'play';
+      play.innerHTML = '<span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7Z"/></svg></span>';
+      var label = document.createElement('div');
+      label.className = 'label';
+      label.textContent = reel.title;
+      card.append(poster, play, label);
+      instagramCards.appendChild(card);
+    });
+    if(instagramCards.childNodes.length) track.replaceChildren(instagramCards);
+  }
+
   // Kartlar yalnızca poster gösterir; tek medya kaynağı tıklanınca modalda yüklenir.
-  document.getElementById('videoTrack').addEventListener('click', function(event){
+  track.addEventListener('click', function(event){
     var card = event.target.closest('.video-card');
     if(!card) return;
+    var poster = card.querySelector('.poster img');
+    var instagramUrl = safeInstagramPermalink(card.getAttribute('data-instagram-url'));
+    if(instagramUrl){
+      modalVideo.pause();
+      modalVideo.removeAttribute('src');
+      modalVideo.load();
+      modalBox.classList.add('instagram-mode');
+      instagramOpenLink.href = instagramUrl;
+      instagramModalFrame.src = instagramUrl + 'embed/';
+      instagramModalFrame.title = card.querySelector('.label').textContent + ' Instagram Reels videosu';
+      backdrop.classList.add('open');
+      document.body.classList.add('locked');
+      return;
+    }
+    modalBox.classList.remove('instagram-mode');
+    instagramModalFrame.src = 'about:blank';
+    if(poster) modalVideo.poster = poster.currentSrc || poster.src;
     modalVideo.pause();
     modalVideo.removeAttribute('src');
     modalVideo.src = card.getAttribute('data-video');
     modalVideo.load();
     backdrop.classList.add('open');
     document.body.classList.add('locked');
-    modalVideo.play().catch(function(){});
+    modalVideo.play().catch(function(){
+      modalVideo.addEventListener('canplay', function(){ modalVideo.play().catch(function(){}); }, { once:true });
+    });
   });
-  document.getElementById('videoTrack').addEventListener('keydown', function(event){
+  track.addEventListener('keydown', function(event){
     if((event.key === 'Enter' || event.key === ' ') && event.target.classList.contains('video-card')){
       event.preventDefault();
       event.target.click();
@@ -1972,6 +2249,8 @@ body.locked{overscroll-behavior:none}
     modalVideo.pause();
     modalVideo.removeAttribute('src');
     modalVideo.load();
+    instagramModalFrame.src = 'about:blank';
+    modalBox.classList.remove('instagram-mode');
   }
   document.getElementById('modalClose').addEventListener('click', closeModal);
   backdrop.addEventListener('click', function(e){ if(e.target === backdrop) closeModal(); });
@@ -1981,7 +2260,6 @@ body.locked{overscroll-behavior:none}
     document.getElementById('top').scrollIntoView({ behavior:'smooth' });
   });
 
-  var track = document.getElementById('videoTrack');
   var prevBtn = document.getElementById('carouselPrev');
   var nextBtn = document.getElementById('carouselNext');
   var originalCards = Array.prototype.slice.call(track.querySelectorAll('.video-card'));
